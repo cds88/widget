@@ -19,7 +19,7 @@ const WidgetTHR08: React.FC = () => {
     queryKey: [AVAILABLE_WIDGETS.WIDGET_TH08],
     queryFn: fetchData,
   });
- console.log("------COMPONENT WIDGRT")
+ 
   const [widgetTHR08State, setWidgetTHR08State] =
     useState<WidgetTHR08State>(data);
   const { brightness, timeLeft, ...widgetTHR08ButtonPanels } = widgetTHR08State;
