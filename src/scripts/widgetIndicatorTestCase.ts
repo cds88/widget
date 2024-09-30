@@ -22,13 +22,13 @@ const calculateExpectedResult = (percentage: number) =>{
         return expectedColorsArrays['<40']
     }
     if(percentage<60) {
-        return expectedColorsArrays['<40']
+        return expectedColorsArrays['<60']
     }
     if(percentage<80) {
-        return expectedColorsArrays['<40']
+        return expectedColorsArrays['<80']
     }
     if(percentage<100) {
-        return expectedColorsArrays['<40']
+        return expectedColorsArrays['<100']
     }
     if(percentage>=100){
         return expectedColorsArrays['100']
