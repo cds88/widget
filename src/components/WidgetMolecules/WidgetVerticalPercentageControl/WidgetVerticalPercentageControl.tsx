@@ -36,14 +36,14 @@ const WidgetVerticalPercentageControl: React.FC<
       <WidgetVerticalPercentageControlStyledIconButton
          data-testid={WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_LABELS.WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON}
          role='button'
-         aria-label='increase brightness'
+         aria-label='increase brightness' 
         onClick={handleIncrease}
         disabled={value === 100}
       >
         <WidgetVerticalPercentageControlStyledAddIcon />
       </WidgetVerticalPercentageControlStyledIconButton>
       <WidgetVerticalPercentageControlStyledPercentageIconButton>
-        <Typography variant="h4">{value}%</Typography>
+        <Typography variant="h2">{value}%</Typography>
       </WidgetVerticalPercentageControlStyledPercentageIconButton>
       <WidgetVerticalPercentageControlStyledIconButton
       data-testid={WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_LABELS.WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON}

@@ -62,7 +62,7 @@ describe('WidgetBatteryTimeLeft Component', () => {
  
     const batteryIcon = getByTestId(BATTERY_DATA_TEST_IDS.BATTERY_ICON);
     expect(batteryIcon).toBeInTheDocument();
-    expect(batteryIcon).toHaveStyle({ color: '#c5a3ff' });
+    expect(batteryIcon).toHaveStyle({ color: 'linear-gradient(white, #f0f0f0)' });
   });
 
   test('has correct wrapper styles applied', () => {
@@ -75,7 +75,7 @@ describe('WidgetBatteryTimeLeft Component', () => {
       'justify-content': 'space-between',
       'background-color': 'rgba(27, 60, 103, 255)',
       color: 'white',
-      padding: '16px',
+      padding: '0px 2rem',
       'border-radius': '8px',
     });
   });

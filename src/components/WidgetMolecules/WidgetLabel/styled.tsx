@@ -4,6 +4,5 @@ export const WidgetLabelWrapperBox = styled(Box)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  font-size: 30px;
+  height: 100%; 
 `;

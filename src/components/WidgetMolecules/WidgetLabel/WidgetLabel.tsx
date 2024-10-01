@@ -6,7 +6,7 @@ import { WidgetLabelWrapperBox } from './styled';
 const WidgetLabel: React.FC<BoxProps> = ({children,  ...props }) => {
   return (
     <WidgetLabelWrapperBox {...props} >
-      <span>{children}</span>
+      <h2>{children}</h2>
     </WidgetLabelWrapperBox>
   );
 };

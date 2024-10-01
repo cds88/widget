@@ -29,14 +29,14 @@ const WidgetBatteryTimeLeft: React.FC<WidgetBatteryTimeLeftProps> = ({
         <BatteryIcon data-testid={BATTERY_DATA_TEST_IDS.BATTERY_ICON} />
         <Typography
           data-testid={BATTERY_DATA_TEST_IDS.BATTERY_TEXT_LABEL}
-          variant="body1"
+          variant="h4"
         >
           Time left
         </Typography>
       </BatteryIconWrapper>
 
       <Typography
-        variant="body1"
+        variant="h4"
         data-testid={BATTERY_DATA_TEST_IDS.BATTERY_EFFECTIVE_TIME_LEFT}
       >
         {effectiveTimeLeft}

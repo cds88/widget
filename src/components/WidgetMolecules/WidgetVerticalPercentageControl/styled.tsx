@@ -26,11 +26,12 @@ export const WidgetVerticalPercentageControlStyledIconButton = styled(IconButton
 `;
 
 export const WidgetVerticalPercentageControlStyledAddIcon = styled(AddIcon)`
-  font-size: 70px;
+  font-size: calc(2.5rem + 3vw);
+  
 `;
 
 export const WidgetVerticalPercentageControlStyledRemoveIcon = styled(RemoveIcon)`
-  font-size: 70px;
+  font-size: calc(2.5rem + 3vw);
 `
 
 export const WidgetVerticalPercentageControlStyledPercentageIconButton = styled(WidgetVerticalPercentageControlStyledIconButton)`

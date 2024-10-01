@@ -9,4 +9,5 @@ export const WidgetButtonPanelWrapperBox = styled(Box)`
   justify-content: space-between;
   align-items: center;
   padding: 2;
+  color:linear-gradient(white, #f0f0f0);
 `;
