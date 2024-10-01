@@ -75,7 +75,7 @@ describe('WidgetBatteryTimeLeft Component', () => {
       'justify-content': 'space-between',
       'background-color': 'rgba(27, 60, 103, 255)',
       color: 'white',
-      padding: '0px 2rem',
+      padding: '0px 1.5rem 0px 0.5rem',
       'border-radius': '8px',
     });
   });

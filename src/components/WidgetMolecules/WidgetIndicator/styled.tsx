@@ -11,13 +11,12 @@ export const IndicatorWrapperBox = styled(Box)`
 `;
 
 export const StyledIndicatorStripe = styled(Box)<{ $highlighted: boolean }>`
-  flex: 1; // Set a width for the lines
+  flex: 1;  
   justify-self: center;
-  height: 8px; // Height of the lines
+  height: 18px; 
   background-color: ${({ $highlighted }) =>
     $highlighted ? 'rgba(153,217,234)' : 'rgba(8,76,148)'};
   transition: background-color 0.3s;
   align-self: center;
-  border-radius: 4px;
-  margin-right: 4px;
+  margin-right: 18px;
 `;

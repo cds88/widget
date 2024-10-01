@@ -21,7 +21,7 @@ const WidgetButtonPanel: React.FC<WidgetButtonPanelProps> = ({
 
   return (
     <WidgetButtonPanelWrapperBox {...props}>
-      <Typography variant="h6">{children}</Typography>
+      <Typography variant="h4">{children}</Typography>
       <Switch checked={checked} onChange={handleToggle} />
     </WidgetButtonPanelWrapperBox>
   );
