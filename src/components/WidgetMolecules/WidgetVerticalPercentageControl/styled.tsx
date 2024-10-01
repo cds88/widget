@@ -14,24 +14,24 @@ export const WidgetVerticalPercentageControlWrapperBox = styled(Box)`
 `;
 
 export const WidgetVerticalPercentageControlStyledIconButton = styled(IconButton)`
-  background-color: rgba(44, 129, 246, 255); // Warm blue color from the theme
-  color: #ffffff; // White color for the icon
+  background-color: rgba(44, 129, 246, 255); 
+  color: #ffffff;  
   &:hover {
     background-color: rgb(23, 52, 86);
   }
-  border-radius: 8px; // Optional: Add some rounding, but still square-like
+  border-radius: 8px;  
   flex: 1;
   display: flex;
   width: 100%;
 `;
 
 export const WidgetVerticalPercentageControlStyledAddIcon = styled(AddIcon)`
-  font-size: calc(2.5rem + 3vw);
+  font-size: 3rem;
   
 `;
 
 export const WidgetVerticalPercentageControlStyledRemoveIcon = styled(RemoveIcon)`
-  font-size: calc(2.5rem + 3vw);
+  font-size: 3rem;
 `
 
 export const WidgetVerticalPercentageControlStyledPercentageIconButton = styled(WidgetVerticalPercentageControlStyledIconButton)`
