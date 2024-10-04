@@ -77,12 +77,18 @@ jobs:
                   
       - name: Deploy to Production
         run: |
-          echo "Deploying to Staging"
-          rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_DESTINATION_FOLDER}
+          echo "Deploying to Production"
+          expect <<EOF
+          spawn rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_DESTINATION_FOLDER}
+          expect "password:"
+          send "$SP\r"
+          interact
+          EOF
         env:    
           AWS_USER: ${{ secrets.AWS_USER }}
           AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
           AWS_REMOTE_DESTINATION_FOLDER: ${{ secrets.AWS_REMOTE_DESTINATION_FOLDER }}
+          SP: ${{ secrets.SP }}          
 
     #   - name: Notify Slack of Production Deployment Start
     #     uses: slackapi/slack-github-action@v1.23.0
