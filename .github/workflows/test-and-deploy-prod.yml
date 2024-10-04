@@ -3,13 +3,6 @@ name: Test and Deploy to Production
 on:
   workflow_dispatch:
 
-  push:
-    branches:
-      - production
-  pull_request:
-    branches:
-      - production
-
 jobs:
   test:
     name: Run Tests
@@ -35,22 +28,19 @@ jobs:
         run: yarn install
 
       - name: Run Tests
-        run: npm run test
+        run: yarn test
 
-  approval:
-    name: Await Manual Approval for Production Deployment
-    runs-on: ubuntu-latest
-    steps:
-        - name: Approval Needed
-          run: echo "Awaiting manual approval..."
-    environment:
-        name: production      
 
+      - name: Run Production tests
+        run: yarn test:production
 
   build-and-deploy:
     name: Build and Deploy to Production
-    needs: [test, approval]  
+    needs: test
     runs-on: ubuntu-latest
+
+    environment:
+        name: production  
 
     steps:
       - name: Checkout Repository
@@ -89,7 +79,7 @@ jobs:
         run: |
           echo "Deploying to Staging"
           rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_DESTINATION_FOLDER}
-        env:
+        env:    
           AWS_USER: ${{ secrets.AWS_USER }}
           AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
           AWS_REMOTE_DESTINATION_FOLDER: ${{ secrets.AWS_REMOTE_DESTINATION_FOLDER }}
