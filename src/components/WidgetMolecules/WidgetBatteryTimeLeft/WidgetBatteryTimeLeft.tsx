@@ -6,7 +6,7 @@ import {
   WidgetBatteryTimeLeftWrapper,
 } from './styled';
 import { convertHoursStateToReadableTime } from './utils/convertHoursStateToReadableTime';
-import { BATTERY_DATA_TEST_IDS } from './const.test';
+import { BATTERY_DATA_TEST_IDS } from './__tests__/const.test';
 
 export type WidgetBatteryTimeLeftProps = {
   hoursLeft: number;

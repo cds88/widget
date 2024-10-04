@@ -1,0 +1,99 @@
+name: Test and Deploy to Staging
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - staging
+  pull_request:
+    branches:
+      - staging
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js version from .nvmrc
+        id: node_version
+        run: |
+          NODE_VERSION=$(cat .nvmrc)
+          echo "Using Node.js version $NODE_VERSION"
+          echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      
+      - name: Install dependencies
+        run: yarn install
+
+      
+      - name: Run Tests
+        run: yarn run test
+
+
+  build-and-deploy:
+    name: Build and Deploy to Staging
+    needs: test  
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js version from .nvmrc
+        id: node_version
+        run: |
+          NODE_VERSION=$(cat .nvmrc)
+          echo "Using Node.js version $NODE_VERSION"
+          echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      
+      - name: Install Dependencies
+        run: yarn install
+
+      
+      - name: Build the React App
+        run: yarn build
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan ${{ secrets.AWS_REMOTE_IP }} >> ~/.ssh/known_hosts
+      
+
+      - name: Install rsync
+        run: sudo apt-get install -y rsync and expect
+                  
+      
+      - name: Deploy to Staging
+        run: |
+          echo "Deploying to Staging"
+          expect <<EOF
+          spawn rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_STAGING_DESTINATION}
+          expect "password:"
+          send "$SP\r"
+          interact
+          EOF
+
+        env:
+          AWS_USER: ${{ secrets.AWS_USER }}
+          AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
+          AWS_REMOTE_DESTINATION_FOLDER: ${{ secrets.AWS_REMOTE_STAGING_DESTINATION }}
+          SP: ${{ secrets.SP }}

@@ -3,12 +3,12 @@ import { useSuspenseQuery } from '@tanstack/react-query';
 import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
-import { AVAILABLE_WIDGETS } from '../../../state/const';
-import { appTheme } from '../../../styles/material-theme';
-import WidgetTHR08 from './WidgetTHR08';
-import { fetchData } from './actions';
+import { AVAILABLE_WIDGETS } from '../../../../state/const';
+import { appTheme } from '../../../../styles/material-theme';
+import WidgetTHR08 from '../WidgetTHR08';
+import { fetchData } from '../actions';
 
-jest.mock('./actions', () => ({
+jest.mock('../actions', () => ({
   fetchData: jest.fn(),
 }));
 
@@ -80,4 +80,5 @@ describe('WidgetTHR08', () => {
 
     expect(screen.getByText(/flashing/i)).toBeInTheDocument();
   });
+  
 });

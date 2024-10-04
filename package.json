@@ -1,6 +1,6 @@
 {
   "name": "widget",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/widget.js",
   "types": "dist/types/index.d.ts",
   "description": "This is a widget component",
@@ -14,7 +14,8 @@
     "start": "webpack serve --config ./webpack.dev.mjs",
     "build": "webpack --config ./webpack.prod.mjs",
     "library": "webpack --config ./webpack.library.mjs",
-    "test": "jest"
+    "test": "jest",
+    "test:production": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
