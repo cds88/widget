@@ -41,14 +41,14 @@ export class WidgetErrorFallback extends React.Component<
   }
 
   render() {
-
-    const errorMessage = this.state.error?.message || 'An unknown error occurred';
+    const errorMessage =
+      this.state.error?.message || 'An unknown error occurred';
 
     return (
       <div role="alert">
         <p>Something went wrong:</p>
         <pre>{errorMessage}</pre>
-        <button onClick={this.props.resetErrorBoundary}>Reset</button> {/* Added Reset Button */}
+        <button onClick={this.props.resetErrorBoundary}>Reset</button>
       </div>
     );
   }

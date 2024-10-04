@@ -11,9 +11,9 @@ export const IndicatorWrapperBox = styled(Box)`
 `;
 
 export const StyledIndicatorStripe = styled(Box)<{ $highlighted: boolean }>`
-  flex: 1;  
+  flex: 1;
   justify-self: center;
-  height: 18px; 
+  height: 18px;
   background-color: ${({ $highlighted }) =>
     $highlighted ? 'rgba(153,217,234)' : 'rgba(8,76,148)'};
   transition: background-color 0.3s;

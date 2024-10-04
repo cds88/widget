@@ -34,7 +34,9 @@ export const WidgetVerticalPercentageControlStyledRemoveIcon = styled(RemoveIcon
   font-size: 3rem;
 `
 
-export const WidgetVerticalPercentageControlStyledPercentageIconButton = styled(WidgetVerticalPercentageControlStyledIconButton)`
+export const WidgetVerticalPercentageControlStyledPercentageIconButton = styled(
+  WidgetVerticalPercentageControlStyledIconButton,
+)`
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.3);
   margin: 4px 0px;

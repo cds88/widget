@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import WidgetButtonPanel from './WidgetButtonPanel';
+import WidgetButtonPanel from '../WidgetButtonPanel';
 
 describe('WidgetButtonPanel', () => {
   const mockOnChange = jest.fn();

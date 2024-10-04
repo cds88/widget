@@ -79,14 +79,21 @@ jobs:
       
 
       - name: Install rsync
-        run: sudo apt-get install -y rsync
+        run: sudo apt-get install -y rsync and expect
                   
       
       - name: Deploy to Staging
         run: |
           echo "Deploying to Staging"
-          rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_STAGING_DESTINATION}
+          expect <<EOF
+          spawn rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_STAGING_DESTINATION}
+          expect "password:"
+          send "$SP\r"
+          interact
+          EOF
+
         env:
           AWS_USER: ${{ secrets.AWS_USER }}
           AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
           AWS_REMOTE_DESTINATION_FOLDER: ${{ secrets.AWS_REMOTE_STAGING_DESTINATION }}
+          SP: ${{ secrets.SP }}
