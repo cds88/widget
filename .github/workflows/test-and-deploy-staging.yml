@@ -1,0 +1,89 @@
+name: Test and Deploy to Staging
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - staging
+  pull_request:
+    branches:
+      - staging
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js version from .nvmrc
+        id: node_version
+        run: |
+          NODE_VERSION=$(cat frontend/.nvmrc)
+          echo "Using Node.js version $NODE_VERSION"
+          echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: yarn install
+
+      # Step 4: Run tests
+      - name: Run Tests
+        run: npm run test
+
+
+  build-and-deploy:
+    name: Build and Deploy to Staging
+    needs: test  # Only runs if the 'test' job succeeds
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js version from .nvmrc
+        id: node_version
+        run: |
+          NODE_VERSION=$(cat frontend/.nvmrc)
+          echo "Using Node.js version $NODE_VERSION"
+          echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # Step 3: Install dependencies
+      - name: Install Dependencies
+        run: yarn install
+
+      # Step 4: Build the React app using Webpack
+      - name: Build the React App
+        run: yarn build
+
+      - name: Add SSH Key
+        uses: webfactory/ssh-agent@v0.8.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Install rsync
+        run: sudo apt-get install -y rsync
+                  
+      # Step 5: Deploy to Staging (using your deploy script or tool)
+      - name: Deploy to Staging
+        run: |
+          echo "Deploying to Staging"
+          rsync -avz -e "ssh -o StrictHostKeyChecking=no" ./build/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_DESTINATION_FOLDER}
+        env:
+          AWS_USER: ${{ secrets.AWS_USER }}
+          AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
+          AWS_REMOTE_DESTINATION_FOLDER: ${{ secrets.AWS_REMOTE_DESTINATION_FOLDER }}
