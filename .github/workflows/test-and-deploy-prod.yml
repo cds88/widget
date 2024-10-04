@@ -73,7 +73,7 @@ jobs:
       
 
       - name: Install rsync
-        run: sudo apt-get install -y rsync
+        run: sudo apt-get install -y rsync expect
                   
       - name: Deploy to Production
         run: |
