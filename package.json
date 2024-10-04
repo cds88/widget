@@ -1,11 +1,19 @@
 {
-  "name": "ap-tech",
+  "name": "widget",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/widget.js",
+  "types": "dist/types/index.d.ts",
+  "description": "This is a widget component",
+  "files": [
+    "dist",
+    "dist/types"
+  ],
   "license": "MIT",
   "scripts": {
-    "generate:test-cases":"ts-node ./src/scripts/widgetIndicatorTestCase.ts",
-    "start": "webpack serve --mode=development --env mode=development",
+    "generate:test-cases": "ts-node ./src/scripts/widgetIndicatorTestCase.ts",
+    "start": "webpack serve --config ./webpack.dev.mjs",
+    "build": "webpack --config ./webpack.prod.mjs",
+    "library": "webpack --config ./webpack.library.mjs",
     "test": "jest"
   },
   "devDependencies": {
@@ -25,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^8.7.0",
     "@typescript-eslint/parser": "^8.7.0",
     "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
     "dotenv-webpack": "^8.1.0",
     "eslint": "^9.11.1",
@@ -37,6 +46,7 @@
     "sass": "^1.79.3",
     "sass-loader": "^16.0.2",
     "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
     "ts-jest": "^29.2.5",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
@@ -44,7 +54,8 @@
     "typescript-eslint": "^8.7.0",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "webpack-dev-server": "^5.1.0",
+    "webpack-merge": "^6.0.1"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
