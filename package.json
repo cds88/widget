@@ -14,7 +14,8 @@
     "start": "webpack serve --config ./webpack.dev.mjs",
     "build": "webpack --config ./webpack.prod.mjs",
     "library": "webpack --config ./webpack.library.mjs",
-    "test": "jest"
+    "test": "jest",
+    "test:prod": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

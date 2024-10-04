@@ -1,14 +1,14 @@
-name: Test and Deploy to Staging
+name: Test and Deploy to Production
 
 on:
   workflow_dispatch:
 
   push:
     branches:
-      - staging
+      - production
   pull_request:
     branches:
-      - staging
+      - production
 
 jobs:
   test:
@@ -31,22 +31,28 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      
       - name: Install dependencies
         run: yarn install
 
-      
       - name: Run Tests
         run: npm run test
 
+  approval:
+    name: Await Manual Approval for Production Deployment
+    runs-on: ubuntu-latest
+    steps:
+        - name: Approval Needed
+          run: echo "Awaiting manual approval..."
+    environment:
+        name: production      
+
 
   build-and-deploy:
-    name: Build and Deploy to Staging
-    needs: test  
+    name: Build and Deploy to Production
+    needs: [test, approval]  
     runs-on: ubuntu-latest
 
     steps:
-      
       - name: Checkout Repository
         uses: actions/checkout@v3
 
@@ -62,11 +68,9 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      
       - name: Install Dependencies
         run: yarn install
 
-      
       - name: Build the React App
         run: yarn build
 
@@ -81,12 +85,25 @@ jobs:
       - name: Install rsync
         run: sudo apt-get install -y rsync
                   
-      
-      - name: Deploy to Staging
+      - name: Deploy to Production
         run: |
           echo "Deploying to Staging"
-          rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_STAGING_DESTINATION}
+          rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_DESTINATION_FOLDER}
         env:
           AWS_USER: ${{ secrets.AWS_USER }}
           AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
-          AWS_REMOTE_DESTINATION_FOLDER: ${{ secrets.AWS_REMOTE_STAGING_DESTINATION }}
+          AWS_REMOTE_DESTINATION_FOLDER: ${{ secrets.AWS_REMOTE_DESTINATION_FOLDER }}
+
+    #   - name: Notify Slack of Production Deployment Start
+    #     uses: slackapi/slack-github-action@v1.23.0
+    #     with:
+    #         slack-message: "Production deployment started."
+    #     env:
+    #         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL_PROD }}
+
+
+    #   - name: Verify Production Deployment
+    #     run: curl -f ${{ secrets.REMOTE_DOMAIN_PRODUCTION_NAME}}/health-check || exit 1          
+
+      - name: Cleanup SSH Keys
+        run: shred -u ~/.ssh/id_rsa
