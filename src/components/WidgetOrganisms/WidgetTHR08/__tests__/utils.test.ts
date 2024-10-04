@@ -1,6 +1,6 @@
  
-import { WidgetTHR08State } from './types'; 
-import { isWidgetTHR08State } from './utils';
+import { WidgetTHR08State } from '../types'; 
+import { isWidgetTHR08State } from '../utils';
 
 describe('isWidgetTHR08State', () => {
   const validWidgetState: WidgetTHR08State = {

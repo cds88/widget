@@ -1,8 +1,9 @@
 import '@testing-library/jest-dom';
 import { fireEvent, render, within } from '@testing-library/react';
 import React from 'react';
-import WidgetButtonPanels from './WidgetButtonPanels';
+import WidgetButtonPanels from '../WidgetButtonPanels';
 import { WIDGET_BUTTON_PANELS } from './const.test';
+ 
 
 const getPanel = (
   getByText: (text: string) => HTMLElement,
@@ -18,7 +19,7 @@ const getPanelCheckbox = (panel: HTMLElement) => {
   expect(panelCheckbox).toBeInTheDocument();
   return panelCheckbox;
 };
-
+ 
 describe('WidgetButtonPanels', () => {
   const mockOnChange = jest.fn();
   const optionsLabels = {
@@ -27,7 +28,7 @@ describe('WidgetButtonPanels', () => {
   };
 
   beforeEach(() => {
-    mockOnChange.mockClear();  
+    mockOnChange.mockClear();
   });
 
   test('Elements found by test-id', () => {
@@ -76,10 +77,10 @@ describe('WidgetButtonPanels', () => {
         state={initialState}
       />,
     );
- 
+
     expect(getByText('Panel 1')).toBeInTheDocument();
     expect(getByText('Panel 2')).toBeInTheDocument();
- 
+
     const panel1 = getByText('Panel 1').nextElementSibling;
     expect(panel1).toBeInTheDocument();
     const panel1Checkbox = within(panel1 as HTMLElement);
@@ -110,8 +111,8 @@ describe('WidgetButtonPanels', () => {
     const panel1Checkbox = getPanelCheckbox(
       panel1.nextElementSibling as HTMLElement,
     );
-    fireEvent.click(panel1Checkbox);  
-    expect(mockOnChange).toHaveBeenCalledWith({ panel1: true });  
+    fireEvent.click(panel1Checkbox);
+    expect(mockOnChange).toHaveBeenCalledWith({ panel1: true });
 
     const panel2 = getPanel(getByText, 'Panel 2');
     const panel2Checkbox = getPanelCheckbox(

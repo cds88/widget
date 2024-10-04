@@ -1,0 +1,1 @@
+export const WIDGET_INDICATOR_LEVELS = [20, 40, 60, 80, 100] as const

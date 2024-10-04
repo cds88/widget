@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WidgetVerticalPercentageControl handles increase and decrease button clicks 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-t22vlc"
+  >
+    <button
+      aria-label="increase brightness"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
+      role="button"
+      tabindex="0"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10n0fgd-MuiSvgIcon-root"
+        data-testid="AddIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
+        />
+      </svg>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-17a1gia-MuiButtonBase-root-MuiIconButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+      >
+        40%
+      </h2>
+    </button>
+    <button
+      aria-label="decrease brightness"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
+      role="button"
+      tabindex="0"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-wivxk4-MuiSvgIcon-root"
+        data-testid="RemoveIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13H5v-2h14z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WidgetVerticalPercentageControl handles increase and decrease button clicks 2`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-t22vlc"
+  >
+    <button
+      aria-label="increase brightness"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
+      role="button"
+      tabindex="0"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10n0fgd-MuiSvgIcon-root"
+        data-testid="AddIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
+        />
+      </svg>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-17a1gia-MuiButtonBase-root-MuiIconButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+      >
+        40%
+      </h2>
+    </button>
+    <button
+      aria-label="decrease brightness"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
+      role="button"
+      tabindex="0"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-wivxk4-MuiSvgIcon-root"
+        data-testid="RemoveIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13H5v-2h14z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WidgetVerticalPercentageControl renders correctly with an initial value of 0 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-t22vlc"
+  >
+    <button
+      aria-label="increase brightness"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
+      role="button"
+      tabindex="0"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10n0fgd-MuiSvgIcon-root"
+        data-testid="AddIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
+        />
+      </svg>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-17a1gia-MuiButtonBase-root-MuiIconButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+      >
+        0%
+      </h2>
+    </button>
+    <button
+      aria-label="decrease brightness"
+      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
+      disabled=""
+      role="button"
+      tabindex="-1"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-wivxk4-MuiSvgIcon-root"
+        data-testid="RemoveIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13H5v-2h14z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WidgetVerticalPercentageControl renders correctly with an initial value of 50 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-t22vlc"
+  >
+    <button
+      aria-label="increase brightness"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
+      role="button"
+      tabindex="0"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10n0fgd-MuiSvgIcon-root"
+        data-testid="AddIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
+        />
+      </svg>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-17a1gia-MuiButtonBase-root-MuiIconButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+      >
+        50%
+      </h2>
+    </button>
+    <button
+      aria-label="decrease brightness"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
+      role="button"
+      tabindex="0"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-wivxk4-MuiSvgIcon-root"
+        data-testid="RemoveIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13H5v-2h14z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WidgetVerticalPercentageControl renders correctly with an initial value of 100 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-t22vlc"
+  >
+    <button
+      aria-label="increase brightness"
+      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
+      disabled=""
+      role="button"
+      tabindex="-1"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10n0fgd-MuiSvgIcon-root"
+        data-testid="AddIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
+        />
+      </svg>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-17a1gia-MuiButtonBase-root-MuiIconButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+      >
+        100%
+      </h2>
+    </button>
+    <button
+      aria-label="decrease brightness"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
+      role="button"
+      tabindex="0"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-wivxk4-MuiSvgIcon-root"
+        data-testid="RemoveIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13H5v-2h14z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;

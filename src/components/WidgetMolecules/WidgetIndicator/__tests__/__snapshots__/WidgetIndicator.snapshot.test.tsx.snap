@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WidgetIndicator should render the WidgetIndicator and match snapshot for 0% percentage 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-blHHSb kyBNWc MuiBox-root css-0"
+    data-testid="WIDGET_INDICATOR_WRAPPER_BOX"
+  >
+    <div
+      class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE0"
+    />
+    <div
+      class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE1"
+    />
+    <div
+      class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE2"
+    />
+    <div
+      class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE3"
+    />
+    <div
+      class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE4"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WidgetIndicator should render the WidgetIndicator and match snapshot for 50% percentage 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-blHHSb kyBNWc MuiBox-root css-0"
+    data-testid="WIDGET_INDICATOR_WRAPPER_BOX"
+  >
+    <div
+      class="sc-gtLWhw kypaGd MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE0"
+    />
+    <div
+      class="sc-gtLWhw kypaGd MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE1"
+    />
+    <div
+      class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE2"
+    />
+    <div
+      class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE3"
+    />
+    <div
+      class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE4"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WidgetIndicator should render the WidgetIndicator and match snapshot for 100% percentage 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-blHHSb kyBNWc MuiBox-root css-0"
+    data-testid="WIDGET_INDICATOR_WRAPPER_BOX"
+  >
+    <div
+      class="sc-gtLWhw kypaGd MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE0"
+    />
+    <div
+      class="sc-gtLWhw kypaGd MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE1"
+    />
+    <div
+      class="sc-gtLWhw kypaGd MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE2"
+    />
+    <div
+      class="sc-gtLWhw kypaGd MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE3"
+    />
+    <div
+      class="sc-gtLWhw kypaGd MuiBox-root css-0"
+      data-testid="WIDGET_INDICATOR_STRIPE4"
+    />
+  </div>
+</DocumentFragment>
+`;

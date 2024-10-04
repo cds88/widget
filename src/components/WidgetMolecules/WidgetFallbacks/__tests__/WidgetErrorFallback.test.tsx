@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-import { WidgetErrorFallback } from './WidgetErrorFallback';
+import { WidgetErrorFallback } from '../WidgetErrorFallback';
 
 describe('WidgetErrorFallback', () => {
   const mockResetErrorBoundary = jest.fn();

@@ -2,7 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 
-import { WidgetLoadingFallback } from './WidgetLoadingFallback';
+import { WidgetLoadingFallback } from '../WidgetLoadingFallback';
 
 describe('WidgetLoadingFallback', () => {
   test('renders the CircularProgress component', () => {

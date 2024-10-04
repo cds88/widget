@@ -1,6 +1,6 @@
 {
   "name": "widget",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/widget.js",
   "types": "dist/types/index.d.ts",
   "description": "This is a widget component",

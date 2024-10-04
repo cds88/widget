@@ -1,13 +1,12 @@
-import {  BoxProps, Switch, Typography } from '@mui/material';
+import { BoxProps, Switch, Typography } from '@mui/material';
 import React, { ChangeEvent } from 'react';
 import { WidgetButtonPanelWrapperBox } from './styled';
-
 
 type WidgetButtonPanelProps = {
   children: React.ReactNode;
   checked: boolean;
   onChange: (value: boolean) => void;
-} & Omit<BoxProps, 'onChange' | 'sx'>
+} & Omit<BoxProps, 'onChange' | 'sx'>;
 
 const WidgetButtonPanel: React.FC<WidgetButtonPanelProps> = ({
   children,

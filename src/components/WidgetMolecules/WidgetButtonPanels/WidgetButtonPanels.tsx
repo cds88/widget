@@ -4,7 +4,7 @@ import React from 'react';
 import WidgetButtonPanel from '../../WidgetAtoms/WidgetButtonPanel/WidgetButtonPanel';
 import { WidgetButtonPanelsContainer } from './styled';
 import { WidgetButtonPanelsOptionsLabels } from './types';
-import { WIDGET_BUTTON_PANELS } from './const.test';
+import { WIDGET_BUTTON_PANELS } from './__tests__/const.test';
 
 type WidgetButtonPanelsProps<T extends string> = {
   onChange: (partialButtonPanelKeyValPair: Partial<Record<T, boolean>>) => void;

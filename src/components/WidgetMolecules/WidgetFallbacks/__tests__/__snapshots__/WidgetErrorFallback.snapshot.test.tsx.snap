@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WidgetErrorFallback Snapshot Tests renders correctly with an error 1`] = `
+<DocumentFragment>
+  <div
+    role="alert"
+  >
+    <p>
+      Something went wrong:
+    </p>
+    <pre>
+      Test error
+    </pre>
+    <button>
+      Reset
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WidgetErrorFallback Snapshot Tests renders with a custom error message 1`] = `
+<DocumentFragment>
+  <div
+    role="alert"
+  >
+    <p>
+      Something went wrong:
+    </p>
+    <pre>
+      Custom error message
+    </pre>
+    <button>
+      Reset
+    </button>
+  </div>
+</DocumentFragment>
+`;

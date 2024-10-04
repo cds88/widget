@@ -1,1 +1,1 @@
-export { default } from './WidgetLabel'
+export { default } from './WidgetLabel';
