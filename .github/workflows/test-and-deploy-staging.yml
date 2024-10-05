@@ -85,7 +85,7 @@ jobs:
       - name: Deploy to Staging
         run: |
           echo "Deploying to Staging"
-          sudo rsync -avz -e "ssh -o StrictHostKeyChecking=no" --super dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_STAGING_DESTINATION}
+          rsync -avz --no-times -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_STAGING_DESTINATION}
 
         env:
           AWS_USER: ${{ secrets.AWS_USER }}
