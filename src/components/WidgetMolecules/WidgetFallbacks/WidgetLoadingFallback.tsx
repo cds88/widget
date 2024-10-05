@@ -7,11 +7,14 @@ export const WidgetLoadingFallback: React.FC<WidgetLoadingFallbackProps> = (
   props,
 ) => {
   return (
-    <CircularProgress
-      aria-busy="true"
-      role="progressbar"
-      {...props}
-      data-testid={'loading-spinner'}
-    />
+    <div>
+      qweqwe
+      <CircularProgress
+        aria-busy="true"
+        role="progressbar"
+        {...props}
+        data-testid={'loading-spinner'}
+      />
+    </div>
   );
 };
