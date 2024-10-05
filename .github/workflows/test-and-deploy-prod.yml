@@ -78,7 +78,7 @@ jobs:
       - name: Deploy to Production
         run: |
           echo "Deploying to Production"
-          spawn rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_DESTINATION_FOLDER}
+          rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_DESTINATION_FOLDER}
 
         env:    
           AWS_USER: ${{ secrets.AWS_USER }}
