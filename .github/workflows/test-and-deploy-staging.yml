@@ -79,7 +79,7 @@ jobs:
       
 
       - name: Install rsync
-        run: sudo apt-get install -y rsync and expect
+        run: sudo apt-get install -y rsync expect
                   
       
       - name: Deploy to Staging
