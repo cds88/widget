@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { fireEvent, render, within } from '@testing-library/react';
 import React from 'react';
 import WidgetButtonPanels from '../WidgetButtonPanels';
-import { WIDGET_BUTTON_PANELS } from './const.test';
+import { WIDGET_BUTTON_PANELS } from '../const.test';
  
 
 const getPanel = (

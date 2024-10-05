@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 import WidgetVerticalPercentageControl from '../WidgetVerticalPercentageControl';
-import { WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_LABELS } from './const.test';
+import { WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_LABELS } from '../const.test';
 
 describe('WidgetVerticalPercentageControl', () => {
   const mockOnChange = jest.fn();

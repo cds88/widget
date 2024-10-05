@@ -1,7 +1,7 @@
 import { BoxProps } from '@mui/material';
 import React from 'react';
 import { IndicatorWrapperBox, StyledIndicatorStripe } from './styled';
-import { WIDGET_INDICATOR_DATA_TEST_IDS } from './__tests__/const.test';
+import { WIDGET_INDICATOR_DATA_TEST_IDS } from './const.test';
 import { WIDGET_INDICATOR_LEVELS } from './const';
 
 type IndicatorProps = {

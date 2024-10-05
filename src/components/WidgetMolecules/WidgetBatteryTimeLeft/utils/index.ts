@@ -1,1 +1,1 @@
-export { displayTimeLeft } from './displayTimeLeft'
+export { convertHoursStateToReadableTime } from './convertHoursStateToReadableTime'

@@ -11,18 +11,6 @@ export default merge(webpackCommon, webpackCommonProd, {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
   },
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-        options: {
-          transpileOnly: true,
-        },
-      },
-    ],
-  },
   optimization: {
     minimize: true,
     minimizer: [

@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import widgetVerticalPercentageControlTestCases from '../../../../testCases/widgetIndicatorTestCases.json';
 import WidgetIndicator from '../WidgetIndicator';
-import { WIDGET_INDICATOR_DATA_TEST_IDS } from './const.test';
+import { WIDGET_INDICATOR_DATA_TEST_IDS } from '../const.test';
  
 const StripesRegexp = new RegExp(
   `^${WIDGET_INDICATOR_DATA_TEST_IDS.WIDGET_INDICATOR_STRIPE}\\d+$`,

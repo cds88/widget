@@ -9,7 +9,7 @@ import {
   WidgetVerticalPercentageControlStyledRemoveIcon,
   WidgetVerticalPercentageControlWrapperBox,
 } from './styled';
-import { WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_LABELS } from './__tests__/const.test';
+import { WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_LABELS } from './const.test';
 
 type WidgetVerticalPercentageControl = {
   value: number;
