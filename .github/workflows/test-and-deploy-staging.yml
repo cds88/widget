@@ -15,27 +15,13 @@ jobs:
     uses: ./.github/workflows/test.common.yml
     with:
       run_production_tests: false
-
-  get-environment-variables:
-    name: Get environment variables for staging
-    runs-on: ubuntu-latest
-    outputs:
-      staging_destination: ${{ steps.set_destination.outputs.staging_destination }}
-    steps:
-      - name: Set STAGING_DESTINATION to environment
-        id: set_destination
-        run: |
-          echo "staging_destination=${{ vars.STAGING_DESTINATION }}" >> $GITHUB_OUTPUT
-
   build-and-deploy:
     name: Build and Deploy to Staging
     needs:
       - test
-      - get-environment-variables
-
     uses: ./.github/workflows/deploy.common.yml
     with:
-      ssh_destination_dir: ${{ needs.get-environment-variables.outputs.staging_destination}}
+      ssh_destination_dir: ${{  vars.STAGING_DESTINATION }}
       ssh_deployment_url: ${{ vars.STAGING_DOMAIN_NAME }}    
     secrets: inherit
 
