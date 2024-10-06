@@ -11,6 +11,13 @@ on:
         description: 'The final URL which the deployment will be available at'
         required: true
         type: string
+    secrets:
+        SSH_PRIVATE_KEY:
+            required: true
+        AWS_REMOTE_IP:
+            required: true
+        AWS_USER:
+            required:true
 
 jobs:
   test:
