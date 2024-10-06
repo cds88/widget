@@ -18,11 +18,12 @@
  * Separate staging branch to gather baches of changes
  * Master branch requires Administrators admissions before changes are pushed to the production 
 
-Feature1 Branch    ->   feature_[feature-branch-1-name].staging ->            
-Feature2 Branch    ->   feature_[feature-branch-2-name].staging ->                       
-                                                                    Develop  -> staging  -> Master  -> Administrators admissions  ->   Production 
-Fix1 Branch        ->   fix_[fix-branch-1-name].staging         ->    
-Fix2 Branch        ->   fix_[fix-branch-2-name].staging         ->    
+Feature1 Branch    ->   feature_[feature-branch-1-name].staging ->  Develop          
+Feature2 Branch    ->   feature_[feature-branch-2-name].staging ->  Develop                                                                                         
+Fix1 Branch        ->   fix_[fix-branch-1-name].staging         ->  Develop  
+Fix2 Branch        ->   fix_[fix-branch-2-name].staging         ->  Develop  
+
+Develop  -> staging  -> Master  -> Administrators admissions  ->   Production 
 
 # Staging Environments
 * [Widget-Feature/fix staging branches](https://widget.staging[Feature|FixBranch{BranchId}].setsudo.net)
