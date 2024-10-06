@@ -12,12 +12,12 @@ on:
         required: true
         type: string
     secrets:
-        SSH_PRIVATE_KEY:
-            required: true
-        AWS_REMOTE_IP:
-            required: true
-        AWS_USER:
-            required: true
+      SSH_PRIVATE_KEY:
+        required: true
+      AWS_REMOTE_IP:
+        required: true
+      AWS_USER:
+        required: true
 
 jobs:
   test:
@@ -58,7 +58,6 @@ jobs:
       - name: Deploy to Staging
         run: |
           echo "Deploying to Staging"
-          echo "Destiniation dir: ${{ inputs.ssh_destination_dir }}"
           rsync -avz --delete --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${{ secrets.AWS_USER}}@${{ secrets.AWS_REMOTE_IP }}:${{ inputs.ssh_destination_dir }}
 
       - name: Post deployment steps
