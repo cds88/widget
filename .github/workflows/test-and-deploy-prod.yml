@@ -35,21 +35,4 @@ jobs:
     with:
       ssh_destination_dir: ${{ needs.get-environment-variables.outputs.production_destination }}
       ssh_deployment_url: ${{ vars.PRODUCTION_DOMAIN_NAME}}
-    secrets:
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
-      AWS_USER: ${{ secrets.AWS_USER }}      
-
-    # REQUIREMENT FOR PRODUCTION ADMINISTRATORS TO ACCEPT DEPLOYMENT
-    # environment:
-    #     name: production
-
-    #   - name: Notify Slack of Production Deployment Start
-    #     uses: slackapi/slack-github-action@v1.23.0
-    #     with:
-    #         slack-message: "Production deployment started."
-    #     env:
-    #         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL_PROD }}
-
-    #   - name: Verify Production Deployment
-    #     run: curl -f ${{ secrets.REMOTE_DOMAIN_PRODUCTION_NAME}}/health-check || exit 1
+    secrets: inherit  

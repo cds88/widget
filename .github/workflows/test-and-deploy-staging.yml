@@ -11,10 +11,10 @@ on:
       - staging
 
 jobs:
-  # test:
-  #   uses: ./.github/workflows/test.common.yml
-  #   with:
-  #     run_production_tests: false
+  test:
+    uses: ./.github/workflows/test.common.yml
+    with:
+      run_production_tests: false
 
   get-environment-variables:
     name: Get environment variables for staging
@@ -30,7 +30,7 @@ jobs:
   build-and-deploy:
     name: Build and Deploy to Staging
     needs:
-      #- test
+      - test
       - get-environment-variables
 
     uses: ./.github/workflows/deploy.common.yml
