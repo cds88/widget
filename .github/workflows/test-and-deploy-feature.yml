@@ -1,0 +1,66 @@
+name: Deploy to Staging
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - 'feature-**'   # Only run this workflow on feature branches
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+
+    - name: Use Node.js version from .nvmrc
+      id: node_version
+      run: |
+        NODE_VERSION=$(cat .nvmrc)
+        echo "Using Node.js version $NODE_VERSION"
+        echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Run tests
+      run: yarn test
+
+    - name: Build the application
+      run: |        
+        yarn build
+
+    - name: Determine branch name
+      id: get_branch
+      run: echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+
+    - name: Deploy to staging
+      env:
+        BRANCH_NAME: ${{ env.BRANCH_NAME }}
+      run: |
+        echo "branch name: ${BRANCH_NAME}"
+
+
+    # - name: Deploy to Staging
+    #   env:
+    #     BRANCH_NAME: ${{ env.BRANCH_NAME }}
+    #   run: |
+    #     # Replace this section with your deployment script
+    #     echo "Deploying to staging for branch: $BRANCH_NAME"
+    #     STAGING_URL="staging-${BRANCH_NAME}.example.com"
+    #     echo "Staging URL: $STAGING_URL"
+
+    #     # Example: Deploy to a dynamically created S3 bucket or service
+    #     # aws s3 sync ./build s3://$STAGING_URL
+
+    # - name: Post deployment steps
+    #   run: |
+    #     echo "Deployment completed for branch: $BRANCH_NAME"
