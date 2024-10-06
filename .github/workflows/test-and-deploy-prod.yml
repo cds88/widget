@@ -15,6 +15,7 @@ jobs:
     uses: ./.github/workflows/test.common.yml
     with:
       run_production_tests: true
+
   get-environment-variables:
     name: Get environment variables for production
     runs-on: ubuntu-latest
@@ -23,8 +24,8 @@ jobs:
     steps:
       - name: Set PRODUCTION_DESTINATION to environment
         id: set_destination
-        run: |
-          echo "production_destination=${{ secrets.PRODUCTION_DESTINATION }}" >> $GITHUB_OUTPUT
+        run: |          
+          echo "::set-output name=production_destination::${{ secrets.PRODUCTION_DESTINATION }}"
 
   build-and-deploy:
     name: Build and Deploy to Production
@@ -34,5 +35,5 @@ jobs:
     uses: ./.github/workflows/deploy.common.yml
     with:
       ssh_destination_dir: ${{ needs.get-environment-variables.outputs.production_destination }}
-      ssh_deployment_url: ${{ vars.PRODUCTION_DOMAIN_NAME}}
-    secrets: inherit  
+      ssh_deployment_url: ${{ vars.PRODUCTION_DOMAIN_NAME }}
+    secrets: inherit
