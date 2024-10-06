@@ -36,8 +36,6 @@ jobs:
           echo "staging_branch_domain_url=$STAGING_BRANCH_DOMAIN_URL" >> $GITHUB_OUTPUT
           echo "staging_branch_destination=$STAGING_BRANCH_DESTINATION_DIR" >> $GITHUB_OUTPUT
 
-
-
   build-and-deploy:
     name: Build and Deploy branch to distinct testing environment
     needs:
@@ -47,4 +45,4 @@ jobs:
     with:
       ssh_deployment_url: ${{ needs.get-environment-variables.outputs.staging_branch_domain_url }}
       ssh_destination_dir: ${{ needs.get-environment-variables.outputs.staging_branch_destination }}
-    secrets: inherit   
+    secrets: inherit

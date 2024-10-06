@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Set PRODUCTION_DESTINATION to environment
         id: set_destination
-        run: | 
+        run: |
           PRODUCTION_DOMAIN_NAME=${{vars.PRODUCTION_DOMAIN_NAME}}         
           PRODUCTION_DESTINATION="/var/www/${PRODUCTION_DOMAIN_NAME}/"
           PRODUCTION_DEPLOYMENT_URL="https://${PRODUCTION_DOMAIN_NAME}/"

@@ -40,8 +40,6 @@ jobs:
 
     uses: ./.github/workflows/deploy.common.yml
     with:
-      ssh_destination_dir: ${{ needs.get-environment-variables.outputs.staging_destination}}
-      ssh_deployment_url: ${{  needs.get-environment-variables.outputs.staging_deployment_url}}    
+      ssh_destination_dir: ${{ needs.get-environment-variables.outputs.staging_destination }}
+      ssh_deployment_url: ${{ needs.get-environment-variables.outputs.staging_deployment_url }}
     secrets: inherit
-
-
