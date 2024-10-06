@@ -17,7 +17,7 @@ on:
         AWS_REMOTE_IP:
             required: true
         AWS_USER:
-            required:true
+            required: true
 
 jobs:
   test:
