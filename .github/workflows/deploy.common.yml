@@ -58,7 +58,11 @@ jobs:
       - name: Deploy to Staging
         run: |
           echo "Deploying to Staging"
-          rsync -avz --delete --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${{ secrets.AWS_USER}}@${{ secrets.AWS_REMOTE_IP }}:${{ inputs.ssh_destination_dir }}
+          rsync -avz --delete --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${{ env.AWS_USER}}@${{ env.AWS_REMOTE_IP }}:${{ inputs.ssh_destination_dir }}
+        env:
+          AWS_USER: ${{ secrets.AWS_USER }}
+          AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
+
 
       - name: Post deployment steps
         run: |
