@@ -3,7 +3,7 @@
 exports[`WidgetLoadingFallback Snapshot Tests renders correctly with default props 1`] = `
 <DocumentFragment>
   <div>
-    qweqwe
+    ABCDEFGHAXYZ
     <span
       aria-busy="true"
       class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1yonwsg-MuiCircularProgress-root"
@@ -32,7 +32,7 @@ exports[`WidgetLoadingFallback Snapshot Tests renders correctly with default pro
 exports[`WidgetLoadingFallback Snapshot Tests renders with custom size and color 1`] = `
 <DocumentFragment>
   <div>
-    qweqwe
+    ABCDEFGHAXYZ
     <span
       aria-busy="true"
       class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorSecondary css-1ixadzc-MuiCircularProgress-root"

@@ -8,7 +8,7 @@ export const WidgetLoadingFallback: React.FC<WidgetLoadingFallbackProps> = (
 ) => {
   return (
     <div>
-      qweqwe
+      ABCDEFGHAXYZ
       <CircularProgress
         aria-busy="true"
         role="progressbar"
