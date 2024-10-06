@@ -25,7 +25,7 @@ jobs:
       - name: Set STAGING_DESTINATION to environment
         id: set_destination
         run: |
-          echo "staging_destination=${{ secrets.STAGING_DESTINATION }}" >> $GITHUB_OUTPUT
+          echo "staging_destination=${{ env.STAGING_DESTINATION }}" >> $GITHUB_OUTPUT
 
   build-and-deploy:
     name: Build and Deploy to Staging

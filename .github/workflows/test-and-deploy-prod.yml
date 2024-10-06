@@ -24,16 +24,8 @@ jobs:
     steps:
       - name: Set PRODUCTION_DESTINATION to environment
         id: set_destination
-        run: |
-          echo "::set-output name=production_destination::${{ secrets.PRODUCTION_DESTINATION }}"
-
-          MY_SECRET="${{secrets.PRODUCTION_DESTINATION}}"
-          MODIFIED_SECRET="${MY_SECRET}-additional-string"
-          echo "1. MOdified secret is : $MODIFIED_SECRET"
-          echo "2. MOdified secret is : ${MODIFIED_SECRET}"
-          
-
-          echo "Github output is $GITHUB_OUTPUT"
+        run: |          
+          echo "staging_destination=${{ env.PRODUCTION_DESTINATION }}" >> $GITHUB_OUTPUT
 
   build-and-deploy:
     name: Build and Deploy to Production
