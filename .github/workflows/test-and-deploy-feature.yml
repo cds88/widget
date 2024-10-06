@@ -79,17 +79,16 @@ jobs:
 
     - name: Deploy to Staging
       env:
-        BRANCH_NAME: ${{ env.BRANCH_NAME }}
         AWS_USER: ${{ secrets.AWS_USER }}
         AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}        
+        BRANCH_NAME: ${{ env.BRANCH_NAME }}        
         STAGING_BRANCH_DESTINATION: ${{ secrets.STAGING_BRANCH_DESTINATION}}
       run: |
         # Replace this section with your deployment script
-        echo "Deploying to staging for branch: $BRANCH_NAME"
-        STAGING_URL="staging-${BRANCH_NAME}.example.com"
-        echo "Staging URL: $STAGING_URL"
-
-        rsync -avz --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" index.html ${AWS_USER}@${AWS_REMOTE_IP}:${STAGING_BRANCH_DESTINATION}${BRANCH_NAME}
+        echo "Deploying to staging for branch: $BRANCH_NAME" 
+        STAGING_DIR="${STAGING_BRANCH_DESTINATION}${BRANCH_NAME}"
+        ssh ${AWS_USER}@${AWS_REMOTE_IP} "mkdir -p ${STAGING_DIR}"
+        rsync -avz --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" index.html ${AWS_USER}@${AWS_REMOTE_IP}:${STAGING_DIR}
 
     # - name: Post deployment steps
     #   run: |
