@@ -41,4 +41,5 @@ jobs:
     with:
       ssh_destination_dir: ${{ needs.get-environment-variables.outputs.production_destination }}
       ssh_deployment_url: ${{ needs.get-environment-variables.outputs.production_deployment_url }}
+      is_production: true
     secrets: inherit

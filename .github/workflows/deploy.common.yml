@@ -11,6 +11,10 @@ on:
         description: 'The final URL which the deployment will be available at'
         required: true
         type: string
+      is_production:
+        description: 'Decide wether deployment will require administrators permission'
+        required: false
+        type: boolean
     secrets:
       SSH_PRIVATE_KEY:
         required: true
@@ -22,6 +26,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    environment:
+      name: ${{ inputs.is_production && 'production' || 'staging' }}
 
     steps:
       - name: Checkout Repository

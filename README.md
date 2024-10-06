@@ -15,17 +15,17 @@
 
 # Gitflow pattern implemented
  * Each feature/fix branch has it's own staging environment
- * Develop branch gathers multiple commitments 
+ * Separate staging branch to gather baches of changes
  * Master branch requires Administrators admissions before changes are pushed to the production 
 
-Feature1 Branch    ->   Staging.FeatureBranch1 ->            
-Feature2 Branch    ->   Staging.FeatureBranch2 ->                       
-                                                     Develop  -> Staging.DevelopBranch  -> Master  -> Administrators admissions  ->   Production 
-Fix1 Branch        ->   Staging.FixBranch1     ->    
-Fix2 Branch        ->   Staging.FixBranch2     ->    
+Feature1 Branch    ->   feature_[feature-branch-1-name].staging ->            
+Feature2 Branch    ->   feature_[feature-branch-2-name].staging ->                       
+                                                                    Develop  -> staging  -> Master  -> Administrators admissions  ->   Production 
+Fix1 Branch        ->   fix_[fix-branch-1-name].staging         ->    
+Fix2 Branch        ->   fix_[fix-branch-2-name].staging         ->    
 
 # Staging Environments
 * [Widget-Feature/fix staging branches](https://widget.staging[Feature|FixBranch{BranchId}].setsudo.net)
-* [Widget Develop Branch](https://widget.staging.setsudo.net)
+* [Widget Develop Branch](https://staging.widget.setsudo.net)
 * [Widget Production Branch](https://widget.setsudo.net)
 
