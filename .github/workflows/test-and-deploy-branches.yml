@@ -35,6 +35,8 @@ jobs:
           echo "staging_branch_domain_url=$STAGING_BRANCH_DOMAIN_URL" >> $GITHUB_OUTPUT
           echo "staging_branch_destination=$STAGING_BRANCH_DESTINATION_DIR" >> $GITHUB_OUTPUT
 
+          echo "Github output is $GITHUB_OUTPUT"
+
   build-and-deploy:
     name: Build and Deploy branch to distinct testing environment
     needs:
