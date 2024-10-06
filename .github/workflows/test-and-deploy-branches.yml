@@ -27,10 +27,11 @@ jobs:
         id: set_destination
         run: |
           BRANCH_NAME=${GITHUB_REF#refs/heads/}      
+          STAGING_DOMAIN_NAME=${{vars.STAGING_DOMAIN_NAME}}
 
           SAFE_BRANCH_NAME=$(echo "${BRANCH_NAME}" | sed 's/\//_/g')
-          STAGING_BRANCH_DOMAIN_URL="https://$SAFE_BRANCH_NAME.${STAGING_DOMAIN_NAME}"
-          STAGING_BRANCH_DESTINATION_DIR="${STAGING_BRANCH_DESTINATION}${SAFE_BRANCH_NAME}"        
+          STAGING_BRANCH_DOMAIN_URL="https://${SAFE_BRANCH_NAME}.${STAGING_DOMAIN_NAME}/"
+          STAGING_BRANCH_DESTINATION_DIR="/var/www/${STAGING_DOMAIN_NAME}/${SAFE_BRANCH_NAME}/"        
 
           echo "staging_branch_domain_url=$STAGING_BRANCH_DOMAIN_URL" >> $GITHUB_OUTPUT
           echo "staging_branch_destination=$STAGING_BRANCH_DESTINATION_DIR" >> $GITHUB_OUTPUT
