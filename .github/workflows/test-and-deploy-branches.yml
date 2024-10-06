@@ -44,3 +44,7 @@ jobs:
     with:
       ssh_deployment_url: ${{ needs.get-environment-variables.outputs.staging_branch_domain_url }}
       ssh_destination_dir: ${{ needs.get-environment-variables.outputs.staging_branch_destination }}
+    secrets:
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
+      AWS_USER: ${{ secrets.AWS_USER }}      
