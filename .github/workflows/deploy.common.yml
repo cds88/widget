@@ -58,7 +58,8 @@ jobs:
       - name: Deploy to Staging
         run: |
           echo "Deploying to Staging"
-          rsync -avz  --delete --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ widgetUser@$185.238.74.97:/var/www/staging.widget.setsudo.net/
+          echo "deployment dir is ${{inputs.ssh_destination_dir}}"
+          rsync -avz  --delete --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${{secrets.AWS_USER}}@${{secrets.AWS_REMOTE_IP}}:${{inputs.ssh_destination_dir}}
 
 
 
@@ -68,6 +69,3 @@ jobs:
 
       - name: Cleanup SSH Keys
         run: shred -u ~/.ssh/id_rsa
-
-
-#rsync -avz  --delete --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${{ secrets.AWS_USER}}@${{ secrets.AWS_REMOTE_IP }}:${{ inputs.ssh_destination_dir }}
