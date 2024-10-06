@@ -20,7 +20,7 @@ on:
         required: true
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -58,8 +58,7 @@ jobs:
       - name: Deploy to Staging
         run: |
           echo "Deploying to Staging"
-          rsync -avz  --delete --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${{secrets.AWS_USER}}@${{secrets.AWS_REMOTE_IP}}:/var/www/staging.widget.setsudo.net/
-
+          rsync -avz  --delete --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${{secrets.AWS_USER}}@${{secrets.AWS_REMOTE_IP}}:${{inputs.ssh_destination_dir}}
       - name: Post deployment steps
         run: |
           echo "Deployment url: ${{ inputs.ssh_deployment_url }}"
