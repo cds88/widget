@@ -1,0 +1,61 @@
+name: Common Deploy Setup
+
+on:
+  workflow_call:
+    inputs:
+      ssh_destination_dir:
+        description: 'The destination directory for remote server'
+        required: true
+        type: string
+      ssh_deployment_url:
+        description: 'The final URL which the deployment will be available at'
+        required: true
+        type: string
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js version from .nvmrc
+        id: node_version
+        run: |
+          NODE_VERSION=$(cat .nvmrc)
+          echo "Using Node.js version $NODE_VERSION"
+          echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build the React App
+        run: yarn build
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan ${{ secrets.AWS_REMOTE_IP }} >> ~/.ssh/known_hosts
+
+      - name: Install rsync
+        run: sudo apt-get install -y rsync
+
+      - name: Deploy to Staging
+        run: |
+          echo "Deploying to Staging"
+          rsync -avz --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${{ secrets.AWS_USER}}@${{ secrets.AWS_REMOTE_IP }}:${{ inputs.ssh_destination_dir }}
+
+      - name: Post deployment steps
+        run: |
+          echo "Deployment url: ${{ inputs.ssh_deployment_url }}"
+
+      - name: Cleanup SSH Keys
+        run: shred -u ~/.ssh/id_rsa

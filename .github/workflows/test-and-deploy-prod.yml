@@ -8,90 +8,37 @@ on:
       - production
   pull_request:
     branches:
-      - production    
+      - production
 
 jobs:
   test:
-    name: Run Tests
+    uses: ./.github/workflows/test.common.yml
+    with:
+      run_production_tests: true
+  get-environment-variables:
+    name: Get environment variables for production
     runs-on: ubuntu-latest
-
+    outputs:
+      production_destination: ${{ steps.set_destination.outputs.production_destination }}
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Use Node.js version from .nvmrc
-        id: node_version
+      - name: Set PRODUCTION_DESTINATION to environment
+        id: set_destination
         run: |
-          NODE_VERSION=$(cat .nvmrc)
-          echo "Using Node.js version $NODE_VERSION"
-          echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Run Tests
-        run: yarn test
-
-
-      - name: Run Production tests
-        run: yarn test:production
+          echo "production_destination=${{ secrets.PRODUCTION_DESTINATION }}" >> $GITHUB_OUTPUT
 
   build-and-deploy:
     name: Build and Deploy to Production
-    needs: test
-    runs-on: ubuntu-latest
+    needs:
+      - test
+      - get-environment-variables
+    uses: ./.github/workflows/deploy.common.yml
+    with:
+      ssh_destination_dir: ${{ needs.get-environment-variables.outputs.production_destination }}
+      ssh_deployment_url: ${{ vars.PRODUCTION_DOMAIN_NAME}}
 
     # REQUIREMENT FOR PRODUCTION ADMINISTRATORS TO ACCEPT DEPLOYMENT
     # environment:
-    #     name: production  
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Use Node.js version from .nvmrc
-        id: node_version
-        run: |
-          NODE_VERSION=$(cat .nvmrc)
-          echo "Using Node.js version $NODE_VERSION"
-          echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Install Dependencies
-        run: yarn install
-
-      - name: Build the React App
-        run: yarn build
-
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan ${{ secrets.AWS_REMOTE_IP }} >> ~/.ssh/known_hosts
-      
-
-      - name: Install rsync
-        run: sudo apt-get install -y rsync
-                  
-      - name: Deploy to Production
-        run: |
-          echo "Deploying to Production"
-          rsync -avz --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_DESTINATION_FOLDER}
-
-        env:    
-          AWS_USER: ${{ secrets.AWS_USER }}
-          AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
-          AWS_REMOTE_DESTINATION_FOLDER: ${{ secrets.AWS_REMOTE_DESTINATION_FOLDER }}  
+    #     name: production
 
     #   - name: Notify Slack of Production Deployment Start
     #     uses: slackapi/slack-github-action@v1.23.0
@@ -100,12 +47,5 @@ jobs:
     #     env:
     #         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL_PROD }}
 
-
     #   - name: Verify Production Deployment
-    #     run: curl -f ${{ secrets.REMOTE_DOMAIN_PRODUCTION_NAME}}/health-check || exit 1          
-
-      - name: Cleanup SSH Keys
-        run: shred -u ~/.ssh/id_rsa
-
-
-        
+    #     run: curl -f ${{ secrets.REMOTE_DOMAIN_PRODUCTION_NAME}}/health-check || exit 1

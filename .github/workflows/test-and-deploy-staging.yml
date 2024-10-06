@@ -12,82 +12,28 @@ on:
 
 jobs:
   test:
-    name: Run Tests
+    uses: ./.github/workflows/test.common.yml
+    with:
+      run_production_tests: false
+
+  get-environment-variables:
+    name: Get environment variables for staging
     runs-on: ubuntu-latest
-
+    outputs:
+      staging_destination: ${{ steps.set_destination.outputs.staging_destination }}
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Use Node.js version from .nvmrc
-        id: node_version
+      - name: Set STAGING_DESTINATION to environment
+        id: set_destination
         run: |
-          NODE_VERSION=$(cat .nvmrc)
-          echo "Using Node.js version $NODE_VERSION"
-          echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      
-      - name: Install dependencies
-        run: yarn install
-
-      
-      - name: Run Tests
-        run: yarn run test
-
+          echo "staging_destination=${{ secrets.STAGING_DESTINATION }}" >> $GITHUB_OUTPUT
 
   build-and-deploy:
     name: Build and Deploy to Staging
-    needs: test  
-    runs-on: ubuntu-latest
+    needs:
+      - test
+      - get-environment-variables
 
-    steps:
-      
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Use Node.js version from .nvmrc
-        id: node_version
-        run: |
-          NODE_VERSION=$(cat .nvmrc)
-          echo "Using Node.js version $NODE_VERSION"
-          echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      
-      - name: Install Dependencies
-        run: yarn install
-
-      
-      - name: Build the React App
-        run: yarn build
-
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan ${{ secrets.AWS_REMOTE_IP }} >> ~/.ssh/known_hosts
-      
-
-      - name: Install rsync
-        run: sudo apt-get install -y rsync 
-                  
-      
-      - name: Deploy to Staging
-        run: |
-          echo "Deploying to Staging"
-          rsync -avz --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${AWS_REMOTE_STAGING_DESTINATION}
-
-        env:
-          AWS_USER: ${{ secrets.AWS_USER }}
-          AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
-          AWS_REMOTE_STAGING_DESTINATION: ${{ secrets.AWS_REMOTE_STAGING_DESTINATION }}
+    uses: ./.github/workflows/deploy.common.yml
+    with:
+      ssh_destination_dir: ${{ needs.get-environment-variables.outputs.staging_destination}}
+      ssh_deployment_url: ${{ vars.STAGING_DOMAIN_NAME }}

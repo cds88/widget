@@ -8,17 +8,23 @@ on:
       - 'feature/**'
       - 'fix/**'
 jobs:
-  deploy:
+  test:
+    uses: ./.github/workflows/test.common.yml
+    with:
+      run_production_tests: false
+  get-environment-variables:
+    name: Get environment variables for branch deployment
     runs-on: ubuntu-latest
-    env:
-      STAGING_DOMAIN_NAME: ${{ vars.STAGING_DOMAIN_NAME }}
-      STAGING_BRANCH_DESTINATION: ${{ secrets.STAGING_BRANCH_DESTINATION}}
+    outputs:
+      staging_branch_destination: ${{ steps.set_destination.outputs.staging_branch_destination}}
+      staging_branch_domain_url: ${{ steps.set_destination.outputs.staging_branch_domain_url}}
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Set environmental variables based on branch name
+        id: set_destination
         run: |
           BRANCH_NAME=${GITHUB_REF#refs/heads/}      
 
@@ -26,52 +32,15 @@ jobs:
           STAGING_BRANCH_DOMAIN_URL="https://$SAFE_BRANCH_NAME.${STAGING_DOMAIN_NAME}"
           STAGING_BRANCH_DESTINATION_DIR="${STAGING_BRANCH_DESTINATION}${SAFE_BRANCH_NAME}"        
 
-          echo "STAGING_BRANCH_DOMAIN_URL=$STAGING_BRANCH_DOMAIN_URL" >> $GITHUB_ENV
-          echo "STAGING_BRANCH_DESTINATION_DIR=$STAGING_BRANCH_DESTINATION_DIR" >> $GITHUB_ENV
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          echo "staging_branch_domain_url=$STAGING_BRANCH_DOMAIN_URL" >> $GITHUB_OUTPUT
+          echo "staging_branch_destination=$STAGING_BRANCH_DESTINATION_DIR" >> $GITHUB_OUTPUT
 
-      - name: Use Node.js version from .nvmrc
-        id: node_version
-        run: |
-          NODE_VERSION=$(cat .nvmrc)
-          echo "Using Node.js version $NODE_VERSION"
-          echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Run tests
-        run: yarn test
-
-      - name: Build the application
-        run: |
-          yarn build
-
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan ${{ secrets.AWS_REMOTE_IP }} >> ~/.ssh/known_hosts
-
-      - name: Install rsync
-        run: sudo apt-get install -y rsync
-
-      - name: Deploy to Staging
-        env:
-          AWS_USER: ${{ secrets.AWS_USER }}
-          AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
-
-        run: |
-          ssh ${AWS_USER}@${AWS_REMOTE_IP} "mkdir -p ${STAGING_BRANCH_DESTINATION_DIR}"
-          rsync -avz --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${STAGING_BRANCH_DESTINATION_DIR}
-
-      - name: Post deployment steps
-        run: |
-          echo "Deployment completed for branch: $BRANCH_NAME" 
-          echo "Deployment distinct url: $STAGING_BRANCH_DOMAIN_URL"
+  build-and-deploy:
+    name: Build and Deploy branch to distinct testing environment
+    needs:
+      - test
+      - get-environment-variables
+    uses: ./.github/workflows/deploy.common.yml
+    with:
+      ssh_deployment_url: ${{ needs.get-environment-variables.outputs.staging_branch_domain_url }}
+      ssh_destination_dir: ${{ needs.get-environment-variables.outputs.staging_branch_destination }}
