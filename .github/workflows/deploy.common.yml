@@ -11,16 +11,13 @@ on:
         description: 'The final URL which the deployment will be available at'
         required: true
         type: string
+    secrets:
       SSH_PRIVATE_KEY:
         required: true
-        type: string
       AWS_REMOTE_IP:
         required: true
-        type: string
       AWS_USER:
         required: true
-        type: string
-
 
 jobs:
   test:
@@ -53,7 +50,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan ${{ inputs.AWS_REMOTE_IP }} >> ~/.ssh/known_hosts
+          ssh-keyscan ${{ secrets.AWS_REMOTE_IP }} >> ~/.ssh/known_hosts
 
       - name: Install rsync
         run: sudo apt-get install -y rsync
@@ -61,7 +58,7 @@ jobs:
       - name: Deploy to Staging
         run: |
           echo "Deploying to Staging"
-          rsync -avz --delete --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${{ inputs.AWS_USER}}@${{ inputs.AWS_REMOTE_IP }}:${{ inputs.ssh_destination_dir }}
+          rsync -avz   --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${{ secrets.AWS_USER}}@${{ secrets.AWS_REMOTE_IP }}:${{ inputs.ssh_destination_dir }}
 
 
 

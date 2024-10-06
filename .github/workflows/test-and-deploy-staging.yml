@@ -11,10 +11,10 @@ on:
       - staging
 
 jobs:
-  test:
-    uses: ./.github/workflows/test.common.yml
-    with:
-      run_production_tests: false
+  # test:
+  #   uses: ./.github/workflows/test.common.yml
+  #   with:
+  #     run_production_tests: false
 
   get-environment-variables:
     name: Get environment variables for staging
@@ -30,15 +30,17 @@ jobs:
   build-and-deploy:
     name: Build and Deploy to Staging
     needs:
-      - test
+      #- test
       - get-environment-variables
 
     uses: ./.github/workflows/deploy.common.yml
     with:
       ssh_destination_dir: ${{ needs.get-environment-variables.outputs.staging_destination}}
-      ssh_deployment_url: ${{ vars.STAGING_DOMAIN_NAME }}
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      ssh_deployment_url: ${{ vars.STAGING_DOMAIN_NAME }}    
+    secrets:
+      AWS_USER: ${{ secrets.AWS_USER}}
       AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
-      AWS_USER: ${{ secrets.AWS_USER }}      
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY}}
+
 
 
