@@ -1,11 +1,11 @@
-name: Deploy to Staging
+name: Deploy Feature branch to Staging dedicated endpoint
 
 on:
   workflow_dispatch:
 
   push:
     branches:
-      - 'feature-**'   # Only run this workflow on feature branches
+      - 'feature/**'   # Only run this workflow on feature branches
 
 jobs:
   deploy:
