@@ -5,93 +5,72 @@ on:
 
   push:
     branches:
-      - 'feature/**'   # Only run this workflow on feature branches
-
+      - 'feature/**'
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      STAGING_DOMAIN_NAME: ${{ vars.STAGING_DOMAIN_NAME }}
+      STAGING_BRANCH_DESTINATION: ${{ secrets.STAGING_BRANCH_DESTINATION}}
 
     steps:
-    # - name: Checkout Repository
-    #   uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
+      - name: Set environmental variables based on branch name
+        run: |
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}      
 
-    # - name: Use Node.js version from .nvmrc
-    #   id: node_version
-    #   run: |
-    #     NODE_VERSION=$(cat .nvmrc)
-    #     echo "Using Node.js version $NODE_VERSION"
-    #     echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
+          SAFE_BRANCH_NAME=$(echo "${BRANCH_NAME}" | sed 's/\//_/g')
+          STAGING_BRANCH_DOMAIN_URL="https://$SAFE_BRANCH_NAME.${STAGING_DOMAIN_NAME}"
+          STAGING_BRANCH_DESTINATION_DIR="${STAGING_BRANCH_DESTINATION}${SAFE_BRANCH_NAME}"        
 
-    # - name: Set up Node.js
-    #   uses: actions/setup-node@v3
-    #   with:
-    #     node-version: ${{ env.NODE_VERSION }}
+          echo "STAGING_BRANCH_DOMAIN_URL=$STAGING_BRANCH_DOMAIN_URL" >> $GITHUB_ENV
+          echo "STAGING_BRANCH_DESTINATION_DIR=$STAGING_BRANCH_DESTINATION_DIR" >> $GITHUB_ENV
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
-    # - name: Install dependencies
-    #   run: yarn install
+      - name: Use Node.js version from .nvmrc
+        id: node_version
+        run: |
+          NODE_VERSION=$(cat .nvmrc)
+          echo "Using Node.js version $NODE_VERSION"
+          echo "NODE_VERSION=${NODE_VERSION}" >> $GITHUB_ENV
 
-    # - name: Run tests
-    #   run: yarn test
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
 
-    # - name: Build the application
-    #   run: |        
-    #     yarn build
+      - name: Install dependencies
+        run: yarn install
 
-    - name: Determine branch name
-      id: get_branch
-      run: |
-        BRANCH_NAME=${GITHUB_REF#refs/heads/}
-        SAFE_BRANCH_NAME=$(echo "${BRANCH_NAME}" | sed 's/\//_/g')
-        echo "BRANCH_NAME=$SAFE_BRANCH_NAME">> $GITHUB_ENV
+      - name: Run tests
+        run: yarn test
 
-    - name: Deploy to staging
-      env:
-        BRANCH_NAME: ${{ env.BRANCH_NAME }}
-      run: |
-        echo "branch name: ${BRANCH_NAME}"
+      - name: Build the application
+        run: |
+          yarn build
 
-    - name: Setup SSH
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan ${{ secrets.AWS_REMOTE_IP }} >> ~/.ssh/known_hosts
-      
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan ${{ secrets.AWS_REMOTE_IP }} >> ~/.ssh/known_hosts
 
-    - name: Install rsync
-      run: sudo apt-get install -y rsync 
+      - name: Install rsync
+        run: sudo apt-get install -y rsync
 
-    - name: Generate basic HTML template
-      run: |
-        echo "<!DOCTYPE html>" > index.html
-        echo "<html lang='en'>" >> index.html
-        echo "<head>" >> index.html
-        echo "<meta charset='UTF-8'>" >> index.html
-        echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>" >> index.html
-        echo "<title>Basic HTML</title>" >> index.html
-        echo "</head>" >> index.html
-        echo "<body>" >> index.html
-        echo "<h1>Hello, World!</h1>" >> index.html
-        echo "</body>" >> index.html
-        echo "</html>" >> index.html
-      
+      - name: Deploy to Staging
+        env:
+          AWS_USER: ${{ secrets.AWS_USER }}
+          AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}
 
-    - name: Deploy to Staging
-      env:
-        AWS_USER: ${{ secrets.AWS_USER }}
-        AWS_REMOTE_IP: ${{ secrets.AWS_REMOTE_IP }}        
-        BRANCH_NAME: ${{ env.BRANCH_NAME }}        
-        STAGING_BRANCH_DESTINATION: ${{ secrets.STAGING_BRANCH_DESTINATION}}
-      run: |
-        # Replace this section with your deployment script
-        echo "Deploying to staging for branch: $BRANCH_NAME" 
-        STAGING_DOMAIN_BRANCH_NAME="https://$BRANCH_NAME.${{ vars.STAGING_DOMAIN_NAME }}"
-        echo "Deployment url: $STAGING_DOMAIN_BRANCH_NAME"
-        STAGING_DIR="${STAGING_BRANCH_DESTINATION}${BRANCH_NAME}"
-        ssh ${AWS_USER}@${AWS_REMOTE_IP} "mkdir -p ${STAGING_DIR}"
-        rsync -avz --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" index.html ${AWS_USER}@${AWS_REMOTE_IP}:${STAGING_DIR}
+        run: |
+          ssh ${AWS_USER}@${AWS_REMOTE_IP} "mkdir -p ${STAGING_BRANCH_DESTINATION_DIR}"
+          rsync -avz --no-times --no-perms -e "ssh -o StrictHostKeyChecking=no" dist/ ${AWS_USER}@${AWS_REMOTE_IP}:${STAGING_BRANCH_DESTINATION_DIR}
 
-    # - name: Post deployment steps
-    #   run: |
-    #     echo "Deployment completed for branch: $BRANCH_NAME"
+      - name: Post deployment steps
+        run: |
+          echo "Deployment completed for branch: $BRANCH_NAME" 
+          echo "Deployment distinct url: $STAGING_BRANCH_DOMAIN_URL"
