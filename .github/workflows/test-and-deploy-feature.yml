@@ -86,7 +86,7 @@ jobs:
       run: |
         # Replace this section with your deployment script
         echo "Deploying to staging for branch: $BRANCH_NAME" 
-        STAGING_DOMAIN_BRANCH_NAME="https://${BRANCH_NAME}.${{ vars.STAGING_DOMAIN_NAME }}"
+        STAGING_DOMAIN_BRANCH_NAME="https://$BRANCH_NAME.${{ vars.STAGING_DOMAIN_NAME }}"
         echo "Deployment url: $STAGING_DOMAIN_BRANCH_NAME"
         STAGING_DIR="${STAGING_BRANCH_DESTINATION}${BRANCH_NAME}"
         ssh ${AWS_USER}@${AWS_REMOTE_IP} "mkdir -p ${STAGING_DIR}"
