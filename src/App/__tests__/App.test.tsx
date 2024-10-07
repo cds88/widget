@@ -1,11 +1,17 @@
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import {
+  CssBaseline,
+  ThemeProvider as MaterialUIThemeProvider,
+} from '@mui/material';
+import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import '@testing-library/jest-dom';
 import { render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
 import WidgetTHR08 from '../../components/WidgetOrganisms/WidgetTHR08';
-import { appTheme } from '../../styles/material-theme';
+import { materialUiTheme } from '../../styles/materialTheme';
 import App from '../App';
+import { SPINNER_DATA_TESTIDS } from '../../components/WidgetMolecules/WidgetFallbacks/const.test';
+import { styledComponentsTheme } from '../../styles/styledComponentsTheme';
 
 jest.mock('../../components/WidgetOrganisms/WidgetTHR08');
 
@@ -32,15 +38,19 @@ describe('App Component', () => {
 
     render(
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={appTheme}>
-          <CssBaseline />
-          <App />
-        </ThemeProvider>
+        <MaterialUIThemeProvider theme={materialUiTheme}>
+          <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+            <CssBaseline />
+            <App />
+          </StyledComponentsThemeProvider>
+        </MaterialUIThemeProvider>
       </QueryClientProvider>,
     );
 
     await waitFor(() =>
-      expect(screen.getByTestId('loading-spinner')).toBeInTheDocument(),
+      expect(
+        screen.getByTestId(SPINNER_DATA_TESTIDS.SPINNER_CIRCULAR_PROGRESS),
+      ).toBeInTheDocument(),
     );
   });
 
@@ -53,10 +63,12 @@ describe('App Component', () => {
 
     render(
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={appTheme}>
-          <CssBaseline />
-          <App />
-        </ThemeProvider>
+        <MaterialUIThemeProvider theme={materialUiTheme}>
+          <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+            <CssBaseline />
+            <App />
+          </StyledComponentsThemeProvider>
+        </MaterialUIThemeProvider>
       </QueryClientProvider>,
     );
 
@@ -71,10 +83,12 @@ describe('App Component', () => {
 
     render(
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={appTheme}>
-          <CssBaseline />
-          <App />
-        </ThemeProvider>
+        <MaterialUIThemeProvider theme={materialUiTheme}>
+          <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+            <CssBaseline />
+            <App />
+          </StyledComponentsThemeProvider>
+        </MaterialUIThemeProvider>
       </QueryClientProvider>,
     );
 

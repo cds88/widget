@@ -45,7 +45,7 @@ const WidgetVerticalPercentageControl: React.FC<
         <WidgetVerticalPercentageControlStyledAddIcon />
       </WidgetVerticalPercentageControlStyledIconButton>
       <WidgetVerticalPercentageControlStyledPercentageIconButton>
-        <Typography variant="h2">{value}%</Typography>
+        <Typography variant="h2" data-testid={WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_LABELS.WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT}>{value}%</Typography>
       </WidgetVerticalPercentageControlStyledPercentageIconButton>
       <WidgetVerticalPercentageControlStyledIconButton
         data-testid={

@@ -17,23 +17,28 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
       data-testid="WIDGET_INDICATOR_WRAPPER_BOX"
     >
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE0"
       />
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE1"
       />
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE2"
       />
       <div
-        class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE3"
       />
       <div
-        class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE4"
       />
     </div>
@@ -67,6 +72,7 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
       >
         <h2
           class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
         >
           60%
         </h2>
@@ -236,23 +242,28 @@ exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
       data-testid="WIDGET_INDICATOR_WRAPPER_BOX"
     >
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE0"
       />
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE1"
       />
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE2"
       />
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE3"
       />
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE4"
       />
     </div>
@@ -287,6 +298,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
       >
         <h2
           class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
         >
           100%
         </h2>
@@ -456,23 +468,28 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
       data-testid="WIDGET_INDICATOR_WRAPPER_BOX"
     >
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE0"
       />
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE1"
       />
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE2"
       />
       <div
-        class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE3"
       />
       <div
-        class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE4"
       />
     </div>
@@ -506,6 +523,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
       >
         <h2
           class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
         >
           60%
         </h2>
@@ -676,23 +694,28 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
       data-testid="WIDGET_INDICATOR_WRAPPER_BOX"
     >
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE0"
       />
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE1"
       />
       <div
-        class="sc-gtLWhw kypaGd MuiBox-root css-0"
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE2"
       />
       <div
-        class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE3"
       />
       <div
-        class="sc-gtLWhw gDxUAP MuiBox-root css-0"
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE4"
       />
     </div>
@@ -726,6 +749,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
       >
         <h2
           class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
         >
           60%
         </h2>

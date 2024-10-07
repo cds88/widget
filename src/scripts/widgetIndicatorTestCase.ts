@@ -1,7 +1,8 @@
 import * as fs from 'fs';
+import { styledComponentsTheme } from '../styles/styledComponentsTheme';
 
-const enabledStripeColor = 'rgba(153,217,234)';
-const disabledStripeColor = 'rgba(8,76,148)';
+const enabledStripeColor =  styledComponentsTheme.styled.colors.indicator.selected;
+const disabledStripeColor =   styledComponentsTheme.styled.colors.indicator.notSelected;
 
 const expectedColorsArrays = {
   '<20': Array(5).fill(disabledStripeColor),

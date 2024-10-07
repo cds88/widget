@@ -22,6 +22,7 @@ const WidgetIndicator: React.FC<IndicatorProps> = ({
         return (
           <StyledIndicatorStripe
             data-testid={`${WIDGET_INDICATOR_DATA_TEST_IDS.WIDGET_INDICATOR_STRIPE}${index}`}
+            aria-selected={highlighted? true: false}
             key={index}
             $highlighted={highlighted}
           />

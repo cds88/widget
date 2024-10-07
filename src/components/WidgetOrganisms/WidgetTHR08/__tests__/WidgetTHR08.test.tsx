@@ -1,12 +1,14 @@
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider as MaterialUIThemeProvider } from '@mui/material';
+import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
 import { AVAILABLE_WIDGETS } from '../../../../state/const';
-import { appTheme } from '../../../../styles/material-theme';
+import { materialUiTheme } from '../../../../styles/materialTheme';
 import WidgetTHR08 from '../WidgetTHR08';
 import { fetchData } from '../actions';
+import { styledComponentsTheme } from '../../../../styles/styledComponentsTheme';
 
 jest.mock('../actions', () => ({
   fetchData: jest.fn(),
@@ -39,9 +41,11 @@ describe('WidgetTHR08', () => {
 
   test('renders without crashing and displays initial values', () => {
     render(
-      <ThemeProvider theme={appTheme}>
-        <WidgetTHR08 />
-      </ThemeProvider>,
+      <MaterialUIThemeProvider theme={materialUiTheme}>
+        <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+          <WidgetTHR08 />
+        </StyledComponentsThemeProvider>
+      </MaterialUIThemeProvider>,
     );
 
     expect(screen.getByText(AVAILABLE_WIDGETS.WIDGET_TH08)).toBeInTheDocument();
@@ -53,9 +57,11 @@ describe('WidgetTHR08', () => {
 
   test('updates brightness when vertical percentage control is changed', () => {
     render(
-      <ThemeProvider theme={appTheme}>
-        <WidgetTHR08 />
-      </ThemeProvider>,
+      <MaterialUIThemeProvider theme={materialUiTheme}>
+        <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+          <WidgetTHR08 />
+        </StyledComponentsThemeProvider>
+      </MaterialUIThemeProvider>,
     );
 
     const increaseButton = screen.getByRole('button', {
@@ -68,9 +74,11 @@ describe('WidgetTHR08', () => {
 
   test('calls onSetButtonPanel when button panels change', () => {
     render(
-      <ThemeProvider theme={appTheme}>
-        <WidgetTHR08 />
-      </ThemeProvider>,
+      <MaterialUIThemeProvider theme={materialUiTheme}>
+        <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+          <WidgetTHR08 />
+        </StyledComponentsThemeProvider>
+      </MaterialUIThemeProvider>,
     );
 
     const flashingButton = screen.getByRole('button', {
@@ -80,5 +88,4 @@ describe('WidgetTHR08', () => {
 
     expect(screen.getByText(/flashing/i)).toBeInTheDocument();
   });
-  
 });

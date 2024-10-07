@@ -32,6 +32,7 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
     >
       <h2
         class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
       >
         40%
       </h2>
@@ -92,6 +93,7 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
     >
       <h2
         class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
       >
         40%
       </h2>
@@ -152,6 +154,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     >
       <h2
         class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
       >
         0%
       </h2>
@@ -213,6 +216,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     >
       <h2
         class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
       >
         50%
       </h2>
@@ -274,6 +278,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     >
       <h2
         class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
       >
         100%
       </h2>

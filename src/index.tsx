@@ -1,15 +1,17 @@
-import React from 'react'
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import {
+  CssBaseline
+} from '@mui/material';
+
 import ReactDOM from 'react-dom/client';
 import App from './App/App';
-import { appTheme } from './styles/material-theme';
+import { ThemesProvider } from './styles/ThemesProvider';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container!);
 
 root.render(
-  <ThemeProvider theme={appTheme}>
+  <ThemesProvider>
     <CssBaseline />
     <App />
-  </ThemeProvider>,
+  </ThemesProvider>,
 );

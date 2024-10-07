@@ -2,13 +2,14 @@ import { useSuspenseQuery } from '@tanstack/react-query';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import React from 'react';
- 
-import { appTheme } from '../../../../styles/material-theme';
-import { WidgetTHR08State } from '../types';
-import WidgetTHR08 from '../WidgetTHR08'; // Adjust the path as necessary
-import { ThemeProvider } from '@mui/material';
 
-// Mocking the useSuspenseQuery hook
+import { materialUiTheme } from '../../../../styles/materialTheme';
+import { WidgetTHR08State } from '../types';
+import WidgetTHR08 from '../WidgetTHR08';
+import { ThemeProvider as MaterialUIThemeProvider } from '@mui/material';
+import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
+import { styledComponentsTheme } from '../../../../styles/styledComponentsTheme';
+
 jest.mock('@tanstack/react-query', () => ({
   useSuspenseQuery: jest.fn(),
 }));
@@ -30,9 +31,11 @@ describe('WidgetTHR08 Snapshot Tests', () => {
 
   it('renders WidgetTHR08 correctly with initial state', () => {
     const { asFragment } = render(
-      <ThemeProvider theme={appTheme}>
-        <WidgetTHR08 />
-      </ThemeProvider>,
+      <MaterialUIThemeProvider theme={materialUiTheme}>
+        <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+          <WidgetTHR08 />
+        </StyledComponentsThemeProvider>
+      </MaterialUIThemeProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -45,9 +48,11 @@ describe('WidgetTHR08 Snapshot Tests', () => {
       },
     });
     const { asFragment } = render(
-      <ThemeProvider theme={appTheme}>
-        <WidgetTHR08 />
-      </ThemeProvider>,
+      <MaterialUIThemeProvider theme={materialUiTheme}>
+        <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+          <WidgetTHR08 />
+        </StyledComponentsThemeProvider>
+      </MaterialUIThemeProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -60,9 +65,11 @@ describe('WidgetTHR08 Snapshot Tests', () => {
       },
     });
     const { asFragment } = render(
-      <ThemeProvider theme={appTheme}>
-        <WidgetTHR08 />
-      </ThemeProvider>,
+      <MaterialUIThemeProvider theme={materialUiTheme}>
+        <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+          <WidgetTHR08 />
+        </StyledComponentsThemeProvider>
+      </MaterialUIThemeProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -75,9 +82,11 @@ describe('WidgetTHR08 Snapshot Tests', () => {
       },
     });
     const { asFragment } = render(
-      <ThemeProvider theme={appTheme}>
-        <WidgetTHR08 />
-      </ThemeProvider>,
+      <MaterialUIThemeProvider theme={materialUiTheme}>
+        <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+          <WidgetTHR08 />
+        </StyledComponentsThemeProvider>
+      </MaterialUIThemeProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
   });

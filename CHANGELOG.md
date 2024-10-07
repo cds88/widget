@@ -7,6 +7,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [v1.0.1] - 2024-10-03
 
 ### Added
+- **Distinct feature/fix branches**: Each push to remote repository utilize github actions CI/CD workflows 
+   - CI/CD runs tests on github actions runner
+   - Each push to feature or fix branch creates a remote staging repository for given branch for testing purposes
+   - Each push to staging branch runs deployment to staging environment
+   - Production deployment workflow requires administrators acceptance before deployment
+- **E2E Testing with Playwright**: Implemented simple object orientated approach for E2E testing.
 - **Snapshot Testing**: Implemented snapshot testing all components using Jest and React Testing Library.
   - Added a mock for the `WidgetTHR08` component in the snapshot test to simplify the test case.
   - Included necessary test setup, including `QueryClientProvider` for React Query and `ThemeProvider` for Material UI.
