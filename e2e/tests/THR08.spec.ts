@@ -3,6 +3,7 @@ import { SPINNER_DATA_TESTIDS } from '../../src/components/WidgetMolecules/Widge
 import { styledComponentsTheme } from '../../src/styles/styledComponentsTheme';
 import { THR08Page } from '../utils/THR08Page';
 import { WEBPACK_DEVELOPEMENT_URL } from '../../const';
+import * as e2eFunctionalTestCases from '../../playwrightTestCases/functionalTestCases'
 
 const ELEMENTS_COUNT = 5;
 
@@ -15,7 +16,7 @@ test.describe('THRO8 widget page', () => {
     );
   });
 
-  test('Should await before spinner dissabpears and correctly show results at initial load', async ({
+  test(e2eFunctionalTestCases.ShouldAwaitForControlsToShowTestCase.label, async ({
     page,
   }) => {
     const thr08 = new THR08Page(page);
