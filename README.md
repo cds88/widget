@@ -36,7 +36,9 @@ fix/my-other-fix           ->   fix_[my-other-fix].staging           ->  Develop
 Develop  -> staging  -> Master  -> Administrators admissions  ->   Production 
 
 # Staging Environments
-* [Widget-Feature/fix staging branches](https://[feature|fix_{BranchName}].staging.widget.setsudo.net)
+* [Widget-Feature example staging branch](https://feature_test-1.staging.widget.setsudo.net)
+* [Widget-Feature other example staging branch](https://feature_test-2.staging.widget.setsudo.net)
+* [Widget-fix     example staging branch](https://fix_test-1.staging.widget.setsudo.net)
 * [Widget Develop Branch](https://staging.widget.setsudo.net)
 * [Widget Production Branch](https://widget.setsudo.net)
 
