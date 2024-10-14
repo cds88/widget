@@ -1,14 +1,14 @@
 # Widget created for testing purposes
-*Implements atomic design (atoms, molecules, organism)*
-*Implements Suspense, Error boundry*
-*Utilises Material-UI with styled-components as styling strategy*
-*Theming utilizing styled-components ThemeProvider*
-*Basic components for quick access utilze Material-ui*
-*Implements multiple unit testing strategies*
-*Implements simple Object Orientated type approach to E2E testing
-*Implements distinct remote staging branches for each respective feature/fix branch pushed to remote repository
-*Push to production branch requires administrator acceptance before deployment*
-*Uses ts-docs for doumenting utilities functions*
+* Implements atomic design (atoms, molecules, organism)*
+* Implements Suspense, Error boundry*
+* Utilises Material-UI with styled-components as styling strategy*
+* Theming utilizing styled-components ThemeProvider*
+* Basic components for quick access utilze Material-ui*
+* Implements multiple unit testing strategies*
+* Implements simple Object Orientated type approach to E2E testing
+* Implements distinct remote staging branches for each respective feature/fix branch pushed to remote repository
+* Push to production branch requires administrator acceptance before deployment*
+* Uses ts-docs for doumenting utilities functions*
 
 
 
