@@ -32,10 +32,18 @@
 
 # Steps to run and facilitate
 
-* yarn to install dependencies *
+## Root directory:
+
+* yarn install         - install dependencies
+* yarn dev             - start developement server
+* yarn test            - start unit tests
+
+## App directory:
+
+* yarn to install dependencies 
 * copy .env.example to .env  - set WEBPACK_DEVELOPMENT_PORT  
-* yarn start -           for developement 
-* yarn test  -           for testing with jest 
+* yarn start           - for developement 
+* yarn test            - for testing with jest 
 * yarn test:production - for testing in mocked production environment (for future implementation)
 * yarn test:e2e        - for end-to-end testing with Playwright
 * yarn library         - create library build for a NPM package
