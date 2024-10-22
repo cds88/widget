@@ -1,0 +1,12 @@
+{
+    "extends": "@widget/typescript-config/base.json",
+    "compilerOptions": {
+      "outDir": "dist",
+      "declaration": true,
+      "emitDeclarationOnly": true      
+    },
+    "include": [  "WidgetBatteryTimeLeft", "WidgetButtonPanels", "WidgetFallbacks", "WidgetIndicator" ,
+  "WidgetLabel", "WidgetVerticalPercentageControl"],
+    "exclude": ["node_modules", "dist"]
+  }
+  

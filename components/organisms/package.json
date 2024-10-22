@@ -1,0 +1,25 @@
+{
+    "name": "@widget/organisms",
+    "version": "0.0.0",
+    "private":true,
+    "scripts": {
+        "test":"jest"
+    },
+    "exports": {
+        ".": "./index.ts",
+        "./WidgetTHR08": "./WidgetTHR08/WidgetTHR08.tsx",
+        "./const": "./const.ts",
+        "./utils":"./WidgetTHR08/utils.ts"
+    }
+    ,
+    "devDependencies": {
+        "@widget/typescript-config": "*",
+        "@widget/themes-providers":"*"
+    },
+    "dependencies": {
+        "@widget/molecules": "*"
+    },
+    "peerDependencies": {
+ 
+    }
+  }

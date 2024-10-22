@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WidgetButtonPanels should render the WidgetButtonPanels and match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg css-63q09u-MuiContainer-root"
+    data-testid="WIDGET_BUTTON_PANELS_CONTAINER"
+  >
+    <div
+      class="MuiBox-root css-9c42oi"
+      data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENToption1"
+    >
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-f84ov1-MuiTypography-root"
+      >
+        Label 1
+      </h4>
+      <span
+        class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
+      >
+        <span
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
+        >
+          <input
+            checked=""
+            class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
+            type="checkbox"
+          />
+          <span
+            class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+          />
+        </span>
+        <span
+          class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+        />
+      </span>
+    </div>
+    <div
+      class="MuiBox-root css-9c42oi"
+      data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENToption2"
+    >
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-f84ov1-MuiTypography-root"
+      >
+        Label 2
+      </h4>
+      <span
+        class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
+      >
+        <span
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
+        >
+          <input
+            class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
+            type="checkbox"
+          />
+          <span
+            class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+          />
+        </span>
+        <span
+          class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+        />
+      </span>
+    </div>
+    <div
+      class="MuiBox-root css-9c42oi"
+      data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENToption3"
+    >
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-f84ov1-MuiTypography-root"
+      >
+        Label 3
+      </h4>
+      <span
+        class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
+      >
+        <span
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
+        >
+          <input
+            checked=""
+            class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
+            type="checkbox"
+          />
+          <span
+            class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+          />
+        </span>
+        <span
+          class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+        />
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WidgetButtonPanels should render with all switches off 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg css-63q09u-MuiContainer-root"
+    data-testid="WIDGET_BUTTON_PANELS_CONTAINER"
+  >
+    <div
+      class="MuiBox-root css-9c42oi"
+      data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENToption1"
+    >
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-f84ov1-MuiTypography-root"
+      >
+        Label 1
+      </h4>
+      <span
+        class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
+      >
+        <span
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
+        >
+          <input
+            class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
+            type="checkbox"
+          />
+          <span
+            class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+          />
+        </span>
+        <span
+          class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+        />
+      </span>
+    </div>
+    <div
+      class="MuiBox-root css-9c42oi"
+      data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENToption2"
+    >
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-f84ov1-MuiTypography-root"
+      >
+        Label 2
+      </h4>
+      <span
+        class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
+      >
+        <span
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
+        >
+          <input
+            class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
+            type="checkbox"
+          />
+          <span
+            class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+          />
+        </span>
+        <span
+          class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+        />
+      </span>
+    </div>
+    <div
+      class="MuiBox-root css-9c42oi"
+      data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENToption3"
+    >
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-f84ov1-MuiTypography-root"
+      >
+        Label 3
+      </h4>
+      <span
+        class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
+      >
+        <span
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
+        >
+          <input
+            class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
+            type="checkbox"
+          />
+          <span
+            class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+          />
+        </span>
+        <span
+          class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+        />
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

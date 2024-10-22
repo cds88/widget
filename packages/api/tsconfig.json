@@ -1,0 +1,11 @@
+{
+    "extends": "@widget/typescript-config/base.json",
+    "compilerOptions": {
+      "outDir": "dist",
+      "declaration": true,
+      "emitDeclarationOnly": true
+    },
+    "include": [  "fetchData.ts", "fetchWidgetState.ts"],
+    "exclude": ["node_modules", "dist"]
+  }
+  

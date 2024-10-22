@@ -1,0 +1,18 @@
+{
+    "name": "@widget/test-cases",
+    "version": "0.0.0",
+    "private": true,
+    "licence": "MIT",
+    "scripts":{
+        "generate:test-cases": "ts-node ./widgetIndicatorTestCase.ts"
+    },
+ 
+    "publishConfig": {
+      "access": "public"
+    },
+    "devDependencies": {
+      "@widget/typescript-config": "*",
+      "@widget/themes-providers": "*"
+    }
+  }
+  

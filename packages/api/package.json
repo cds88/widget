@@ -1,0 +1,20 @@
+{
+    "name": "@widget/api",
+    "version": "0.0.0",
+    "private": true,
+    "licence": "MIT",
+    "exports":{
+        "./fetchData": "./fetchData.ts"
+    },
+ 
+ 
+    "publishConfig": {
+      "access": "public"
+    },
+    "devDependencies": {
+      "@widget/typescript-config": "*",
+      "@widget/themes-providers": "*",
+      "@widget/organisms":"*"
+    }
+  }
+  

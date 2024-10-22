@@ -1,0 +1,45 @@
+name: Test and Deploy to Production
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - production
+  pull_request:
+    branches:
+      - production
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.common.yml
+    with:
+      run_production_tests: true
+
+  get-environment-variables:
+    name: Get environment variables for production
+    runs-on: ubuntu-latest
+    outputs:
+      production_destination: ${{ steps.set_destination.outputs.production_destination }}
+      production_deployment_url: ${{ steps.set_destination.outputs.production_deployment_url }}
+    steps:
+      - name: Set PRODUCTION_DESTINATION to environment
+        id: set_destination
+        run: |
+          PRODUCTION_DOMAIN_NAME=${{vars.PRODUCTION_DOMAIN_NAME}}         
+          PRODUCTION_DESTINATION="/var/www/${PRODUCTION_DOMAIN_NAME}/"
+          PRODUCTION_DEPLOYMENT_URL="https://${PRODUCTION_DOMAIN_NAME}/"
+          echo "production_destination=${PRODUCTION_DESTINATION}" >> $GITHUB_OUTPUT
+          echo "production_deployment_url=${PRODUCTION_DEPLOYMENT_URL}" >> $GITHUB_OUTPUT
+
+  build-and-deploy:
+    name: Build and Deploy to Production
+    needs:
+      - test
+      - get-environment-variables
+    uses: ./.github/workflows/deploy.common.yml
+    with:
+      ssh_destination_dir: ${{ needs.get-environment-variables.outputs.production_destination }}
+      ssh_deployment_url: ${{ needs.get-environment-variables.outputs.production_deployment_url }}
+      is_production: true
+    secrets: inherit

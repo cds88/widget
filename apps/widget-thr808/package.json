@@ -1,0 +1,63 @@
+{
+  "name": "widget",
+  "version": "1.0.1",
+  "main": "dist/widget.js",
+  "types": "dist/types/index.d.ts",
+  "description": "This is a widget component",
+  "files": [
+    "dist",
+    "dist/types"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "generate:test-cases": "ts-node ./src/scripts/widgetIndicatorTestCase.ts",
+    "start": "webpack serve --config ./webpack.dev.mjs",
+    "start:test": "webpack serve --config ./webpack.tests.mjs",
+    "dev": "yarn start",
+    "build": "webpack --config ./webpack.prod.mjs",
+    "library": "webpack --config ./webpack.library.mjs",
+    "test": "jest",
+    "test:production": "jest",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "@eslint/js": "^9.11.1",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "babel-loader": "^9.2.1",
+    "chokidar-cli": "^3.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
+    "dotenv-webpack": "^8.1.0",
+    "eslint": "^9.11.1",
+    "globals": "^15.9.0",
+    "html-webpack-plugin": "^5.6.0",
+    "pixelmatch": "^6.0.0",
+    "postcss-loader": "^8.1.1",
+    "prettier": "^3.3.3",
+    "sass": "^1.79.3",
+    "sass-loader": "^16.0.2",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "ts-jest": "^29.2.5",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.7.0"
+  },
+  "dependencies": {
+    "@mui/material": "^6.1.1",
+    "@mui/types": "^7.2.17",
+    "@widget/atoms": "*",
+    "@widget/molecules": "*",
+    "@widget/organisms": "*",
+    "@widget/themes-providers": "*",
+    "dotenv": "^16.4.5",
+    "pngjs": "^7.0.0",
+    "react-error-boundary": "^4.0.13",
+    "react-router-dom": "^6.26.2"
+  }
+}
