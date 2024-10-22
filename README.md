@@ -1,81 +1,62 @@
-# Turborepo starter
+# Widget created for testing purposes
+* Implements `Atomic Design` (atoms, molecules, organism)
+* Atomic design is combined with `Turborepo` monorepository architecture:
+  - atoms, molecules and organisms are all distinct component packages served by Turborepo
+  - components are rather stateless, they will depend on the data being fed into them
+  - organisms are imported to apps. In this example we have a THR08 organism that is rendered inside widget-thr808 app 
+  - Each organisms is a final form being rendered inside a app. 
+  - This approach is modular, allows for separation of concern and is a example of modern React app aproach
+* Implements Suspense, Error boundry
+* Utilises Material-UI with styled-components as styling strategy
+* Theming utilizing styled-components ThemeProvider
+* Basic components for quick access utilze Material-ui
+* Implements multiple unit testing strategies
+* End-to-End testing implemented with Playwright
+* End-to-End visual regression tests with help of Pixelmatch
+  - each type of browser has it's own baseline screenshot saved in the `screenshots` directory
+  - any given mismatch will throw an error
+* Script `widgetIndicatorTestCase.ts` is a generator that creates all possible test cases for a particular component 
+  - Test cases are imported first to the unit test
+  - The related component has to pass all test cases created beforehand
+  - Example of `Test Driven Developement` approach
+* Class `THR08Page` is example of `Object Orientated Programming` approach in the End-to-End test cases
+  - Allows to reuse lots of logic
+  - Creates a adapter between the functionalities and the test case
+   
+* Implements distinct remote staging branches for each respective feature/fix branch pushed to remote repository
+  - If a developer pushes his branch to feature/test-1 the application will be deployed under a distinct subdomain related to the branch name
+  - Same happens with fix branches which deploy under distinct subdomains aswell
+  - Main staging branch exists for CI/CD pipeline to deploy app to generic staging domain
+* Push to production branch requires administrator acceptance before deployment
+* Uses ts-docs for doumenting utilities functions
 
-This is an official starter Turborepo.
+# Steps to run and facilitate
 
-## Using this example
+* yarn to install dependencies *
+* copy .env.example to .env  - set WEBPACK_DEVELOPMENT_PORT  
+* yarn start -           for developement 
+* yarn test  -           for testing with jest 
+* yarn test:production - for testing in mocked production environment (for future implementation)
+* yarn test:e2e        - for end-to-end testing with Playwright
+* yarn library         - create library build for a NPM package
+* yarn build           - create build for deployment 
 
-Run the following command:
+# Gitflow pattern implemented
+ * Each feature/fix branch has it's own staging environment
+ * Separate staging branch to gather baches of changes
+ * Master branch requires Administrators admissions before changes are pushed to the production 
 
-```sh
-npx create-turbo@latest
-```
+feature/my-feature-1       ->   feature_[my-feature-1].staging       ->  Develop          
+feature/my-other-feature-2 ->   feature_[my-other-feature-2].staging ->  Develop                                                                                         
+fix/my-first-fix           ->   fix_[my-first-fix].staging           ->  Develop  
+fix/my-other-fix           ->   fix_[my-other-fix].staging           ->  Develop  
 
-## What's inside?
+Develop  -> staging  -> Master  -> Administrators admissions  ->   Production 
 
-This Turborepo includes the following packages/apps:
+# Staging Environments
+* [Widget-Feature example staging branch](https://feature_test-1.staging.widget.setsudo.net)
+* [Widget-Feature other example staging branch](https://feature_test-2.staging.widget.setsudo.net)
+* [Widget-fix     example staging branch](https://fix_test-1.staging.widget.setsudo.net)
+* [Widget Develop Branch](https://staging.widget.setsudo.net)
+* [Widget Production Branch](https://widget.setsudo.net)
 
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)

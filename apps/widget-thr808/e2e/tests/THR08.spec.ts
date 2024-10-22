@@ -1,9 +1,8 @@
 import { expect, test } from '@playwright/test';
+import { SPINNER_DATA_TESTIDS } from '@widget/molecules';
+import * as e2eFunctionalTestCases from '../../playwrightTestCases/functionalTestCases';
 import { styledComponentsTheme } from '../../src/styles/styledComponentsTheme';
 import { THR08Page } from '../utils/THR08Page';
-import { WEBPACK_DEVELOPEMENT_URL } from '../../const';
-import * as e2eFunctionalTestCases from '../../playwrightTestCases/functionalTestCases';
-import { SPINNER_DATA_TESTIDS } from '@widget/molecules';
 
 const ELEMENTS_COUNT = 5;
 
