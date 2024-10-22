@@ -1,0 +1,11 @@
+{
+    "extends": "@widget/typescript-config/base.json",
+    "compilerOptions": {
+      "outDir": "dist",
+      "declaration": true,
+      "emitDeclarationOnly": true
+    },
+    "include": ["src", "WidgetButtonPanel"],
+    "exclude": ["node_modules", "dist"]
+  }
+  

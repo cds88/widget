@@ -1,0 +1,902 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial state 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-17xcrxe"
+  >
+    <div
+      class="MuiBox-root css-1jfwip0"
+    >
+      <h2>
+        THR 08
+      </h2>
+    </div>
+    <div
+      class="sc-blHHSb kyBNWc MuiBox-root css-6s6h61"
+      data-testid="WIDGET_INDICATOR_WRAPPER_BOX"
+    >
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE0"
+      />
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE1"
+      />
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE2"
+      />
+      <div
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE3"
+      />
+      <div
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE4"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1h9zwfv"
+    >
+      <button
+        aria-label="increase brightness"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
+        role="button"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1d7e3sj-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
+          />
+        </svg>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1eebz1f-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
+        >
+          60%
+        </h2>
+      </button>
+      <button
+        aria-label="decrease brightness"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
+        role="button"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hg12mq-MuiSvgIcon-root"
+          data-testid="RemoveIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13H5v-2h14z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="MuiBox-root css-1lsa933"
+      data-testid="BATTERY_TIME_LEFT_WRAPPER"
+    >
+      <div
+        class="MuiBox-root css-1i8ffpq"
+        data-testid="BATTERY_ICON_WRAPPER"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-12kx3jy-MuiSvgIcon-root"
+          data-testid="BATTERY_ICON"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4M11 20v-5.5H9L13 7v5.5h2z"
+          />
+        </svg>
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          data-testid="BATTERY_TEXT_LABEL"
+        >
+          Time left
+        </h4>
+      </div>
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        data-testid="BATTERY_EFFECTIVE_TIME_LEFT"
+      >
+        4h
+      </h4>
+    </div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1gf6tve-MuiContainer-root"
+      data-testid="WIDGET_BUTTON_PANELS_CONTAINER"
+    >
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTduskTillDawn"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Dusk Till Dawn
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTflashing"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Flashing
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTnightVision"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Night Vision
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              checked=""
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-17xcrxe"
+  >
+    <div
+      class="MuiBox-root css-1jfwip0"
+    >
+      <h2>
+        THR 08
+      </h2>
+    </div>
+    <div
+      class="sc-blHHSb kyBNWc MuiBox-root css-6s6h61"
+      data-testid="WIDGET_INDICATOR_WRAPPER_BOX"
+    >
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE0"
+      />
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE1"
+      />
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE2"
+      />
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE3"
+      />
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE4"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1h9zwfv"
+    >
+      <button
+        aria-label="increase brightness"
+        class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
+        disabled=""
+        role="button"
+        tabindex="-1"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1d7e3sj-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
+          />
+        </svg>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1eebz1f-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
+        >
+          100%
+        </h2>
+      </button>
+      <button
+        aria-label="decrease brightness"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
+        role="button"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hg12mq-MuiSvgIcon-root"
+          data-testid="RemoveIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13H5v-2h14z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="MuiBox-root css-1lsa933"
+      data-testid="BATTERY_TIME_LEFT_WRAPPER"
+    >
+      <div
+        class="MuiBox-root css-1i8ffpq"
+        data-testid="BATTERY_ICON_WRAPPER"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-12kx3jy-MuiSvgIcon-root"
+          data-testid="BATTERY_ICON"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4M11 20v-5.5H9L13 7v5.5h2z"
+          />
+        </svg>
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          data-testid="BATTERY_TEXT_LABEL"
+        >
+          Time left
+        </h4>
+      </div>
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        data-testid="BATTERY_EFFECTIVE_TIME_LEFT"
+      >
+        4h
+      </h4>
+    </div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1gf6tve-MuiContainer-root"
+      data-testid="WIDGET_BUTTON_PANELS_CONTAINER"
+    >
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTduskTillDawn"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Dusk Till Dawn
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTflashing"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Flashing
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTnightVision"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Night Vision
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              checked=""
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-17xcrxe"
+  >
+    <div
+      class="MuiBox-root css-1jfwip0"
+    >
+      <h2>
+        THR 08
+      </h2>
+    </div>
+    <div
+      class="sc-blHHSb kyBNWc MuiBox-root css-6s6h61"
+      data-testid="WIDGET_INDICATOR_WRAPPER_BOX"
+    >
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE0"
+      />
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE1"
+      />
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE2"
+      />
+      <div
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE3"
+      />
+      <div
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE4"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1h9zwfv"
+    >
+      <button
+        aria-label="increase brightness"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
+        role="button"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1d7e3sj-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
+          />
+        </svg>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1eebz1f-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
+        >
+          60%
+        </h2>
+      </button>
+      <button
+        aria-label="decrease brightness"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
+        role="button"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hg12mq-MuiSvgIcon-root"
+          data-testid="RemoveIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13H5v-2h14z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="MuiBox-root css-1lsa933"
+      data-testid="BATTERY_TIME_LEFT_WRAPPER"
+    >
+      <div
+        class="MuiBox-root css-1i8ffpq"
+        data-testid="BATTERY_ICON_WRAPPER"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-12kx3jy-MuiSvgIcon-root"
+          data-testid="BATTERY_ICON"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4M11 20v-5.5H9L13 7v5.5h2z"
+          />
+        </svg>
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          data-testid="BATTERY_TEXT_LABEL"
+        >
+          Time left
+        </h4>
+      </div>
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        data-testid="BATTERY_EFFECTIVE_TIME_LEFT"
+      >
+        4h
+      </h4>
+    </div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1gf6tve-MuiContainer-root"
+      data-testid="WIDGET_BUTTON_PANELS_CONTAINER"
+    >
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTduskTillDawn"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Dusk Till Dawn
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTflashing"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Flashing
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              checked=""
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTnightVision"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Night Vision
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              checked=""
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-17xcrxe"
+  >
+    <div
+      class="MuiBox-root css-1jfwip0"
+    >
+      <h2>
+        THR 08
+      </h2>
+    </div>
+    <div
+      class="sc-blHHSb kyBNWc MuiBox-root css-6s6h61"
+      data-testid="WIDGET_INDICATOR_WRAPPER_BOX"
+    >
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE0"
+      />
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE1"
+      />
+      <div
+        aria-selected="true"
+        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE2"
+      />
+      <div
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE3"
+      />
+      <div
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
+        data-testid="WIDGET_INDICATOR_STRIPE4"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1h9zwfv"
+    >
+      <button
+        aria-label="increase brightness"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
+        role="button"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1d7e3sj-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
+          />
+        </svg>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1eebz1f-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
+        >
+          60%
+        </h2>
+      </button>
+      <button
+        aria-label="decrease brightness"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
+        role="button"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hg12mq-MuiSvgIcon-root"
+          data-testid="RemoveIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13H5v-2h14z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="MuiBox-root css-1lsa933"
+      data-testid="BATTERY_TIME_LEFT_WRAPPER"
+    >
+      <div
+        class="MuiBox-root css-1i8ffpq"
+        data-testid="BATTERY_ICON_WRAPPER"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-12kx3jy-MuiSvgIcon-root"
+          data-testid="BATTERY_ICON"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4M11 20v-5.5H9L13 7v5.5h2z"
+          />
+        </svg>
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          data-testid="BATTERY_TEXT_LABEL"
+        >
+          Time left
+        </h4>
+      </div>
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        data-testid="BATTERY_EFFECTIVE_TIME_LEFT"
+      >
+        4h
+      </h4>
+    </div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1gf6tve-MuiContainer-root"
+      data-testid="WIDGET_BUTTON_PANELS_CONTAINER"
+    >
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTduskTillDawn"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Dusk Till Dawn
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTflashing"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Flashing
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+      <div
+        class="MuiBox-root css-9c42oi"
+        data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTnightVision"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        >
+          Night Vision
+        </h4>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

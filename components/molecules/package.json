@@ -1,0 +1,28 @@
+{
+    "name": "@widget/molecules",
+    "version": "0.0.0",
+    "private":true,
+    "scripts": {
+        "test":"jest"
+    },
+    "exports": {
+        ".": "./index.ts",
+        "./WidgetBatteryTimeLeft":"./WidgetBatteryTimeLeft/WidgetBatteryTimeLeft.tsx",
+        "./WidgetButtonPanels": "./WidgetButtonPanels/WidgetButtonPanels.tsx",
+        "./WidgetFallbacks": "./WidgetFallbacks/index.tsx",
+        "./WidgetIndicator":"./WidgetIndicator/WidgetIndicator.tsx",
+        "./WidgetLabel":"./WidgetLabel/WidgetLabel.tsx",
+        "./WidgetVerticalPercentageControl":"./WidgetVerticalPercentageControl"
+
+    }
+    ,
+    "devDependencies": {
+        "@widget/typescript-config": "*"
+    },
+    "dependencies": {
+        "@widget/atoms": "*"
+    },
+    "peerDependencies": {
+ 
+    }
+  }

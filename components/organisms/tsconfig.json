@@ -1,0 +1,11 @@
+{
+    "extends": "@widget/typescript-config/base.json",
+    "compilerOptions": {
+      "outDir": "dist",
+      "declaration": true,
+      "emitDeclarationOnly": true      
+    },
+    "include": ["./WidgetTHR08/utils.ts"],
+    "exclude": ["node_modules", "dist"]
+  }
+  

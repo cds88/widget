@@ -1,0 +1,23 @@
+{
+    "name": "@widget/atoms",
+    "version": "0.0.0",
+    "private":true,
+    "scripts": {
+        "test":"jest"
+    },
+    "exports": {
+        ".":"./index.ts",
+        "./WidgetButtonPanel": "./WidgetButtonPanel/WidgetButtonPanel.tsx"
+        
+    }
+    ,
+    "devDependencies": {
+        "@widget/typescript-config": "*"
+    },
+    "dependencies": {
+ 
+    },
+    "peerDependencies": {
+ 
+    }
+  }

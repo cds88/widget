@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component Snapshot Test matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-10our08"
+  >
+    <div>
+      Mocked WidgetTHR08
+    </div>
+  </div>
+</DocumentFragment>
+`;

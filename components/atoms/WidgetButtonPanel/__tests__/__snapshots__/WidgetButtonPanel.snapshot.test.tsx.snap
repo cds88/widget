@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WidgetButtonPanel matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-9c42oi"
+  >
+    <h4
+      class="MuiTypography-root MuiTypography-h4 css-10zsxzp-MuiTypography-root"
+    >
+      Test Widget
+    </h4>
+    <span
+      class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+      >
+        <input
+          class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+          type="checkbox"
+        />
+        <span
+          class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+        />
+      </span>
+      <span
+        class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
