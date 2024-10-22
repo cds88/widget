@@ -1,6 +1,4 @@
-import {
-  ThemeProvider as MaterialUIThemeProvider
-} from '@mui/material';
+import { ThemeProvider as MaterialUIThemeProvider } from '@mui/material';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
 import { materialUiTheme } from './materialTheme';
 import { styledComponentsTheme } from './styledComponentsTheme';

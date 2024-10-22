@@ -1,4 +1,3 @@
 export enum WidgetsEnum {
-    WIDGET_THR08 = "WIDGET_TH08"
+  WIDGET_THR08 = 'WIDGET_TH08',
 }
-

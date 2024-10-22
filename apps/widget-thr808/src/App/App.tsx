@@ -1,27 +1,10 @@
-import {
-  QueryClient,
-  QueryClientProvider,
-  useSuspenseQuery,
-} from '@tanstack/react-query';
-import React, { Suspense, useState } from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { useState } from 'react';
 
-import { AppWrapper } from './styled';
 import { WidgetTHR08 } from '@widget/organisms';
-import { WidgetErrorFallback, WidgetLoadingFallback } from '@widget/molecules';
-import { AVAILABLE_WIDGETS } from '@widget/organisms/const'; 
+import { AVAILABLE_WIDGETS } from '@widget/organisms/const';
 import { WidgetTHR08State } from '@widget/organisms/WidgetTHR08/types';
-import { fetchWidgetState } from '../utils/action';
-import { isWidgetTHR08State } from '../../../../components/organisms/WidgetTHR08/utils';
-
-
-
-export const fetchData = async (): Promise<WidgetTHR08State> => {
-  const data = await fetchWidgetState();
-  if (isWidgetTHR08State(data)) return data;
-  throw new Error('Invalid data format');
-};
-
+import { fetchData } from './utils';
 
 const App = () => {
   const { data } = useSuspenseQuery<WidgetTHR08State, Error>({
@@ -52,15 +35,13 @@ const App = () => {
   };
 
   return (
-
-      <WidgetTHR08
-        brightness={brightness}
-        onSetBrightness={onSetBrightness}
-        timeLeft={timeLeft}
-        onSetButtonPanel={onSetButtonPanel}
-        widgetTHR08ButtonPanels={widgetTHR08ButtonPanels}
-      />
-
+    <WidgetTHR08
+      brightness={brightness}
+      onSetBrightness={onSetBrightness}
+      timeLeft={timeLeft}
+      onSetButtonPanel={onSetButtonPanel}
+      widgetTHR08ButtonPanels={widgetTHR08ButtonPanels}
+    />
   );
 };
 

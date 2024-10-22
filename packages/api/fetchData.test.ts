@@ -1,5 +1,5 @@
-import { isWidgetTHR08State } from '../utils';
-import { WidgetTHR08State } from '../types';
+import { isWidgetTHR08State } from '../../components/organisms/WidgetTHR08/utils';
+import { WidgetTHR08State } from '../../components/organisms/WidgetTHR08/types';
  
 
 jest.mock('../../../../utils/action', () => ({

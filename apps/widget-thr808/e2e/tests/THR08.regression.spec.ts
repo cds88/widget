@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import { PNG } from 'pngjs';
 
-import Pixelmatch from 'pixelmatch'; 
+import Pixelmatch from 'pixelmatch';
 import { getScreenshotPath } from '../utils/getScreenshotPath';
 import { PixelMismatchMainViewTestCase } from '../../playwrightTestCases/visualRegressionTestCases/PixelMismatchMainView';
 import { SPINNER_DATA_TESTIDS } from '@widget/molecules/WidgetFallbacks/const.test';

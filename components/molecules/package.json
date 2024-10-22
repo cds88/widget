@@ -20,7 +20,9 @@
         "@widget/typescript-config": "*"
     },
     "dependencies": {
-        "@widget/atoms": "*"
+        "@widget/atoms": "*",
+        "@widget/themes-providers": "*",
+        "@widget/test-cases":"*"
     },
     "peerDependencies": {
  

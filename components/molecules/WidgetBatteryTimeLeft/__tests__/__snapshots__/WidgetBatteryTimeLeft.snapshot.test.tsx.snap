@@ -12,7 +12,7 @@ exports[`WidgetBatteryTimeLeft Component renders correctly with 5 hours left 1`]
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-12929eu-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7m6ws2-MuiSvgIcon-root"
         data-testid="BATTERY_ICON"
         focusable="false"
         viewBox="0 0 24 24"
@@ -22,14 +22,14 @@ exports[`WidgetBatteryTimeLeft Component renders correctly with 5 hours left 1`]
         />
       </svg>
       <h4
-        class="MuiTypography-root MuiTypography-h4 css-10zsxzp-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h4 css-f84ov1-MuiTypography-root"
         data-testid="BATTERY_TEXT_LABEL"
       >
         Time left
       </h4>
     </div>
     <h4
-      class="MuiTypography-root MuiTypography-h4 css-10zsxzp-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h4 css-f84ov1-MuiTypography-root"
       data-testid="BATTERY_EFFECTIVE_TIME_LEFT"
     >
       5h

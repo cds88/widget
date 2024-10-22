@@ -1,7 +1,6 @@
 import { Locator, Page } from '@playwright/test';
 import { WIDGET_INDICATOR_DATA_TEST_IDS } from '@widget/molecules/WidgetIndicator/const.test';
 import { WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_LABELS } from '@widget/molecules/WidgetVerticalPercentageControl/const.test';
- 
 
 const STRIPE_INDICATORS_REGEXP = new RegExp(
   `^${WIDGET_INDICATOR_DATA_TEST_IDS.WIDGET_INDICATOR_STRIPE}[0-4]`,

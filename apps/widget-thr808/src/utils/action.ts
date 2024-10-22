@@ -10,4 +10,3 @@ export const fetchWidgetState = () =>
       });
     }, 2000);
   });
-

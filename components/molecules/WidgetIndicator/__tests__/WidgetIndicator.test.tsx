@@ -2,12 +2,13 @@ import '@testing-library/jest-dom';
 import 'jest-styled-components';
 import { render } from '@testing-library/react';
 import React from 'react';
-import widgetVerticalPercentageControlTestCases from '../../../../testCases/widgetIndicatorTestCases.json';
+import widgetVerticalPercentageControlTestCases from '@widget/test-cases/widgetIndicatorTestCases.json';
 import { WIDGET_INDICATOR_DATA_TEST_IDS } from '../const.test';
 import WidgetIndicator from '../WidgetIndicator';
  
-import { ThemesProvider } from '../../../../styles/ThemesProvider';
-import { styledComponentsTheme } from '../../../../styles/styledComponentsTheme';
+ 
+ 
+import { styledComponentsTheme, ThemesProvider } from '@widget/themes-providers';
 
 
 const StripesRegexp = new RegExp(

@@ -5,7 +5,7 @@
       "declaration": true,
       "emitDeclarationOnly": true      
     },
-    "include": ["./WidgetTHR08/utils.ts"],
+    "include": ["./WidgetTHR08/utils.ts", "./WidgetTHR08/**/*", "./WidgetTHR08/__tests__/WidgetTHR08.test.tsx"],
     "exclude": ["node_modules", "dist"]
   }
   

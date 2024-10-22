@@ -13,7 +13,8 @@
     }
     ,
     "devDependencies": {
-        "@widget/typescript-config": "*"
+        "@widget/typescript-config": "*",
+        "@widget/themes-providers":"*"
     },
     "dependencies": {
         "@widget/molecules": "*"

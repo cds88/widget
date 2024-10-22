@@ -1,8 +1,10 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
-import React from 'react';
-import { ThemesProvider } from '../../../../styles/ThemesProvider';
+import React from 'react'; 
 import WidgetIndicator from '../WidgetIndicator';
+import { ThemesProvider } from '@widget/themes-providers';
+ 
+ 
 
 describe('WidgetIndicator', () => {
   test('should render the WidgetIndicator and match snapshot for 0% percentage', () => {

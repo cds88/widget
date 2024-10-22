@@ -4,17 +4,17 @@ exports[`WidgetLoadingFallback Snapshot Tests renders correctly with default pro
 <DocumentFragment>
   <span
     aria-busy="true"
-    class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1yonwsg-MuiCircularProgress-root"
+    class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1wxecgq-MuiCircularProgress-root"
     data-testid="SPINNER_CIRCULAR_PROGRESS"
     role="progressbar"
     style="width: 40px; height: 40px;"
   >
     <svg
-      class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+      class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
       viewBox="22 22 44 44"
     >
       <circle
-        class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-1a8epmm-MuiCircularProgress-circle"
+        class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-960umw-MuiCircularProgress-circle"
         cx="44"
         cy="44"
         fill="none"
@@ -30,17 +30,17 @@ exports[`WidgetLoadingFallback Snapshot Tests renders with custom size and color
 <DocumentFragment>
   <span
     aria-busy="true"
-    class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorSecondary css-1ixadzc-MuiCircularProgress-root"
+    class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorSecondary css-w58ak0-MuiCircularProgress-root"
     data-testid="SPINNER_CIRCULAR_PROGRESS"
     role="progressbar"
     style="width: 60px; height: 60px;"
   >
     <svg
-      class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+      class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
       viewBox="22 22 44 44"
     >
       <circle
-        class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-1a8epmm-MuiCircularProgress-circle"
+        class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-960umw-MuiCircularProgress-circle"
         cx="44"
         cy="44"
         fill="none"

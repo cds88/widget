@@ -47,7 +47,7 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
     >
       <button
         aria-label="increase brightness"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-tingfh-MuiButtonBase-root-MuiIconButton-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
         role="button"
         tabindex="0"
@@ -55,7 +55,7 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1d7e3sj-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-l1i5sl-MuiSvgIcon-root"
           data-testid="AddIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -66,12 +66,12 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
         </svg>
       </button>
       <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1eebz1f-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-vcpopu-MuiButtonBase-root-MuiIconButton-root"
         tabindex="0"
         type="button"
       >
         <h2
-          class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h2 css-1rkfbvl-MuiTypography-root"
           data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
         >
           60%
@@ -79,7 +79,7 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
       </button>
       <button
         aria-label="decrease brightness"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-tingfh-MuiButtonBase-root-MuiIconButton-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
         role="button"
         tabindex="0"
@@ -87,7 +87,7 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hg12mq-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1izeyjh-MuiSvgIcon-root"
           data-testid="RemoveIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-12kx3jy-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ok4hbm-MuiSvgIcon-root"
           data-testid="BATTERY_ICON"
           focusable="false"
           viewBox="0 0 24 24"
@@ -118,17 +118,17 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
           />
         </svg>
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
           data-testid="BATTERY_TEXT_LABEL"
         >
           Time left
         </h4>
       </div>
       <h4
-        class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         data-testid="BATTERY_EFFECTIVE_TIME_LEFT"
       >
-        4h
+        90h
       </h4>
     </div>
     <div
@@ -140,26 +140,27 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTduskTillDawn"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Dusk Till Dawn
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              checked=""
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>
@@ -168,26 +169,26 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTflashing"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Flashing
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>
@@ -196,27 +197,27 @@ exports[`WidgetTHR08 Snapshot Tests renders WidgetTHR08 correctly with initial s
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTnightVision"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Night Vision
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
               checked=""
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>
@@ -257,13 +258,13 @@ exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
         data-testid="WIDGET_INDICATOR_STRIPE2"
       />
       <div
-        aria-selected="true"
-        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE3"
       />
       <div
-        aria-selected="true"
-        class="sc-gtLWhw chVlSI MuiBox-root css-0"
+        aria-selected="false"
+        class="sc-gtLWhw fXVKSa MuiBox-root css-0"
         data-testid="WIDGET_INDICATOR_STRIPE4"
       />
     </div>
@@ -272,16 +273,15 @@ exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
     >
       <button
         aria-label="increase brightness"
-        class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-tingfh-MuiButtonBase-root-MuiIconButton-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
-        disabled=""
         role="button"
-        tabindex="-1"
+        tabindex="0"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1d7e3sj-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-l1i5sl-MuiSvgIcon-root"
           data-testid="AddIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -292,20 +292,20 @@ exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
         </svg>
       </button>
       <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1eebz1f-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-vcpopu-MuiButtonBase-root-MuiIconButton-root"
         tabindex="0"
         type="button"
       >
         <h2
-          class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h2 css-1rkfbvl-MuiTypography-root"
           data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
         >
-          100%
+          60%
         </h2>
       </button>
       <button
         aria-label="decrease brightness"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-tingfh-MuiButtonBase-root-MuiIconButton-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
         role="button"
         tabindex="0"
@@ -313,7 +313,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hg12mq-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1izeyjh-MuiSvgIcon-root"
           data-testid="RemoveIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -334,7 +334,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-12kx3jy-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ok4hbm-MuiSvgIcon-root"
           data-testid="BATTERY_ICON"
           focusable="false"
           viewBox="0 0 24 24"
@@ -344,17 +344,17 @@ exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
           />
         </svg>
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
           data-testid="BATTERY_TEXT_LABEL"
         >
           Time left
         </h4>
       </div>
       <h4
-        class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         data-testid="BATTERY_EFFECTIVE_TIME_LEFT"
       >
-        4h
+        90h
       </h4>
     </div>
     <div
@@ -366,26 +366,27 @@ exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTduskTillDawn"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Dusk Till Dawn
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              checked=""
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>
@@ -394,26 +395,26 @@ exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTflashing"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Flashing
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>
@@ -422,27 +423,27 @@ exports[`WidgetTHR08 Snapshot Tests renders with 100% brightness 1`] = `
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTnightVision"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Night Vision
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
               checked=""
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>
@@ -498,7 +499,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
     >
       <button
         aria-label="increase brightness"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-tingfh-MuiButtonBase-root-MuiIconButton-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
         role="button"
         tabindex="0"
@@ -506,7 +507,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1d7e3sj-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-l1i5sl-MuiSvgIcon-root"
           data-testid="AddIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -517,12 +518,12 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
         </svg>
       </button>
       <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1eebz1f-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-vcpopu-MuiButtonBase-root-MuiIconButton-root"
         tabindex="0"
         type="button"
       >
         <h2
-          class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h2 css-1rkfbvl-MuiTypography-root"
           data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
         >
           60%
@@ -530,7 +531,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
       </button>
       <button
         aria-label="decrease brightness"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-tingfh-MuiButtonBase-root-MuiIconButton-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
         role="button"
         tabindex="0"
@@ -538,7 +539,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hg12mq-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1izeyjh-MuiSvgIcon-root"
           data-testid="RemoveIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -559,7 +560,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-12kx3jy-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ok4hbm-MuiSvgIcon-root"
           data-testid="BATTERY_ICON"
           focusable="false"
           viewBox="0 0 24 24"
@@ -569,17 +570,17 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
           />
         </svg>
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
           data-testid="BATTERY_TEXT_LABEL"
         >
           Time left
         </h4>
       </div>
       <h4
-        class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         data-testid="BATTERY_EFFECTIVE_TIME_LEFT"
       >
-        4h
+        90h
       </h4>
     </div>
     <div
@@ -591,26 +592,27 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTduskTillDawn"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Dusk Till Dawn
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              checked=""
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>
@@ -619,27 +621,26 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTflashing"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Flashing
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
-              checked=""
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>
@@ -648,27 +649,27 @@ exports[`WidgetTHR08 Snapshot Tests renders with flashing on 1`] = `
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTnightVision"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Night Vision
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
               checked=""
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>
@@ -724,7 +725,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
     >
       <button
         aria-label="increase brightness"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-tingfh-MuiButtonBase-root-MuiIconButton-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
         role="button"
         tabindex="0"
@@ -732,7 +733,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1d7e3sj-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-l1i5sl-MuiSvgIcon-root"
           data-testid="AddIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -743,12 +744,12 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
         </svg>
       </button>
       <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1eebz1f-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-vcpopu-MuiButtonBase-root-MuiIconButton-root"
         tabindex="0"
         type="button"
       >
         <h2
-          class="MuiTypography-root MuiTypography-h2 css-9jq9wx-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h2 css-1rkfbvl-MuiTypography-root"
           data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
         >
           60%
@@ -756,7 +757,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
       </button>
       <button
         aria-label="decrease brightness"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-161injf-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-tingfh-MuiButtonBase-root-MuiIconButton-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
         role="button"
         tabindex="0"
@@ -764,7 +765,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hg12mq-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1izeyjh-MuiSvgIcon-root"
           data-testid="RemoveIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -785,7 +786,7 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-12kx3jy-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ok4hbm-MuiSvgIcon-root"
           data-testid="BATTERY_ICON"
           focusable="false"
           viewBox="0 0 24 24"
@@ -795,17 +796,17 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
           />
         </svg>
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
           data-testid="BATTERY_TEXT_LABEL"
         >
           Time left
         </h4>
       </div>
       <h4
-        class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         data-testid="BATTERY_EFFECTIVE_TIME_LEFT"
       >
-        4h
+        90h
       </h4>
     </div>
     <div
@@ -817,26 +818,27 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTduskTillDawn"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Dusk Till Dawn
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              checked=""
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>
@@ -845,26 +847,26 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTflashing"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Flashing
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>
@@ -873,26 +875,27 @@ exports[`WidgetTHR08 Snapshot Tests renders with nightVision off 1`] = `
         data-testid="WIDGET_BUTTON_PANELS_PANEL_COMPONENTnightVision"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-1ox7yl3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-wvyscm-MuiTypography-root"
         >
           Night Vision
         </h4>
         <span
-          class="MuiSwitch-root MuiSwitch-sizeMedium css-tnsvld-MuiSwitch-root"
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-1twhucs-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-1ebq2wm-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-4zox53-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
-              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              checked=""
+              class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
               type="checkbox"
             />
             <span
-              class="MuiSwitch-thumb css-vuwwt-MuiSwitch-thumb"
+              class="MuiSwitch-thumb css-x6ay48-MuiSwitch-thumb"
             />
           </span>
           <span
-            class="MuiSwitch-track css-nhoa5s-MuiSwitch-track"
+            class="MuiSwitch-track css-pvslz3-MuiSwitch-track"
           />
         </span>
       </div>

@@ -7,7 +7,7 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
   >
     <button
       aria-label="increase brightness"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-9n2ivc-MuiButtonBase-root-MuiIconButton-root"
       data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
       role="button"
       tabindex="0"
@@ -15,7 +15,7 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10n0fgd-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-135butq-MuiSvgIcon-root"
         data-testid="AddIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -26,12 +26,12 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
       </svg>
     </button>
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-17a1gia-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1rxnyxz-MuiButtonBase-root-MuiIconButton-root"
       tabindex="0"
       type="button"
     >
       <h2
-        class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h2 css-o2za6n-MuiTypography-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
       >
         40%
@@ -39,7 +39,7 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
     </button>
     <button
       aria-label="decrease brightness"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-9n2ivc-MuiButtonBase-root-MuiIconButton-root"
       data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
       role="button"
       tabindex="0"
@@ -47,7 +47,7 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-wivxk4-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-s8523u-MuiSvgIcon-root"
         data-testid="RemoveIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -68,7 +68,7 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
   >
     <button
       aria-label="increase brightness"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-9n2ivc-MuiButtonBase-root-MuiIconButton-root"
       data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
       role="button"
       tabindex="0"
@@ -76,7 +76,7 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10n0fgd-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-135butq-MuiSvgIcon-root"
         data-testid="AddIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -87,12 +87,12 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
       </svg>
     </button>
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-17a1gia-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1rxnyxz-MuiButtonBase-root-MuiIconButton-root"
       tabindex="0"
       type="button"
     >
       <h2
-        class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h2 css-o2za6n-MuiTypography-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
       >
         40%
@@ -100,7 +100,7 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
     </button>
     <button
       aria-label="decrease brightness"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-9n2ivc-MuiButtonBase-root-MuiIconButton-root"
       data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
       role="button"
       tabindex="0"
@@ -108,7 +108,7 @@ exports[`WidgetVerticalPercentageControl handles increase and decrease button cl
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-wivxk4-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-s8523u-MuiSvgIcon-root"
         data-testid="RemoveIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -129,7 +129,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
   >
     <button
       aria-label="increase brightness"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-9n2ivc-MuiButtonBase-root-MuiIconButton-root"
       data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
       role="button"
       tabindex="0"
@@ -137,7 +137,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10n0fgd-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-135butq-MuiSvgIcon-root"
         data-testid="AddIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -148,12 +148,12 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
       </svg>
     </button>
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-17a1gia-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1rxnyxz-MuiButtonBase-root-MuiIconButton-root"
       tabindex="0"
       type="button"
     >
       <h2
-        class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h2 css-o2za6n-MuiTypography-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
       >
         0%
@@ -161,7 +161,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     </button>
     <button
       aria-label="decrease brightness"
-      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-9n2ivc-MuiButtonBase-root-MuiIconButton-root"
       data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
       disabled=""
       role="button"
@@ -170,7 +170,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-wivxk4-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-s8523u-MuiSvgIcon-root"
         data-testid="RemoveIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -191,7 +191,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
   >
     <button
       aria-label="increase brightness"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-9n2ivc-MuiButtonBase-root-MuiIconButton-root"
       data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
       role="button"
       tabindex="0"
@@ -199,7 +199,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10n0fgd-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-135butq-MuiSvgIcon-root"
         data-testid="AddIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -210,12 +210,12 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
       </svg>
     </button>
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-17a1gia-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1rxnyxz-MuiButtonBase-root-MuiIconButton-root"
       tabindex="0"
       type="button"
     >
       <h2
-        class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h2 css-o2za6n-MuiTypography-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
       >
         50%
@@ -223,7 +223,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     </button>
     <button
       aria-label="decrease brightness"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-9n2ivc-MuiButtonBase-root-MuiIconButton-root"
       data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
       role="button"
       tabindex="0"
@@ -231,7 +231,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-wivxk4-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-s8523u-MuiSvgIcon-root"
         data-testid="RemoveIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -252,7 +252,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
   >
     <button
       aria-label="increase brightness"
-      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-9n2ivc-MuiButtonBase-root-MuiIconButton-root"
       data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_PLUS_BUTTON"
       disabled=""
       role="button"
@@ -261,7 +261,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10n0fgd-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-135butq-MuiSvgIcon-root"
         data-testid="AddIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -272,12 +272,12 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
       </svg>
     </button>
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-17a1gia-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1rxnyxz-MuiButtonBase-root-MuiIconButton-root"
       tabindex="0"
       type="button"
     >
       <h2
-        class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h2 css-o2za6n-MuiTypography-root"
         data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_RESULT"
       >
         100%
@@ -285,7 +285,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     </button>
     <button
       aria-label="decrease brightness"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ldfrm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-9n2ivc-MuiButtonBase-root-MuiIconButton-root"
       data-testid="WIDGET_VERTICAL_PERCENTAGE_CONTROL_DATA_TEST_MINUS_BUTTON"
       role="button"
       tabindex="0"
@@ -293,7 +293,7 @@ exports[`WidgetVerticalPercentageControl renders correctly with an initial value
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-wivxk4-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-s8523u-MuiSvgIcon-root"
         data-testid="RemoveIcon"
         focusable="false"
         viewBox="0 0 24 24"

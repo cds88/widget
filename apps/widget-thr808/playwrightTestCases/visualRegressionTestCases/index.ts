@@ -1,1 +1,1 @@
-export {PixelMismatchMainViewTestCase} from './PixelMismatchMainView'
+export { PixelMismatchMainViewTestCase } from './PixelMismatchMainView';

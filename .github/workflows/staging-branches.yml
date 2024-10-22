@@ -1,0 +1,48 @@
+name: Deploy Feature branch to Staging dedicated endpoint
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - 'feature/**'
+      - 'fix/**'
+jobs:
+  test:
+    uses: ./.github/workflows/test.common.yml
+    with:
+      run_production_tests: false
+  get-environment-variables:
+    name: Get environment variables for branch deployment
+    runs-on: ubuntu-latest
+    outputs:
+      staging_branch_destination: ${{ steps.set_destination.outputs.staging_branch_destination}}
+      staging_branch_domain_url: ${{ steps.set_destination.outputs.staging_branch_domain_url}}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set environmental variables based on branch name
+        id: set_destination
+        run: |
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}      
+          STAGING_DOMAIN_NAME=${{vars.STAGING_DOMAIN_NAME}}
+
+          SAFE_BRANCH_NAME=$(echo "${BRANCH_NAME}" | sed 's/\//_/g')
+          STAGING_BRANCH_DOMAIN_URL="https://${SAFE_BRANCH_NAME}.${STAGING_DOMAIN_NAME}/"
+          STAGING_BRANCH_DESTINATION_DIR="/var/www/branch.${STAGING_DOMAIN_NAME}/${SAFE_BRANCH_NAME}/"        
+
+          echo "staging_branch_domain_url=$STAGING_BRANCH_DOMAIN_URL" >> $GITHUB_OUTPUT
+          echo "staging_branch_destination=$STAGING_BRANCH_DESTINATION_DIR" >> $GITHUB_OUTPUT
+
+  build-and-deploy:
+    name: Build and Deploy branch to distinct testing environment
+    needs:
+      - test
+      - get-environment-variables
+    uses: ./.github/workflows/deploy.common.yml
+    with:
+      ssh_deployment_url: ${{ needs.get-environment-variables.outputs.staging_branch_domain_url }}
+      ssh_destination_dir: ${{ needs.get-environment-variables.outputs.staging_branch_destination }}
+    secrets: inherit

@@ -1,21 +1,19 @@
-import {
-  CssBaseline,
-  ThemeProvider as MaterialUIThemeProvider,
-} from '@mui/material';
-import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
+import { CssBaseline } from '@mui/material';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import '@testing-library/jest-dom';
 import { render, screen, waitFor } from '@testing-library/react';
-import React from 'react'; 
-import { materialUiTheme } from '../../styles/materialTheme';
-import App from '../App'; 
-import { styledComponentsTheme } from '../../styles/styledComponentsTheme';
+import { WidgetErrorFallback, WidgetLoadingFallback } from '@widget/molecules';
 import { WidgetTHR08 } from '@widget/organisms';
+import React, { Suspense } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 import { SPINNER_DATA_TESTIDS } from '../../../../../components/molecules/WidgetFallbacks/const.test';
+import { ThemesProvider } from '../../styles/ThemesProvider';
+import App from '../App';
+import { AppWrapper } from '../styled';
 
-jest.mock('@widget/organisms/WidgetTHR08');
+jest.mock('../App');
 
-const MockedWidgetTHR08 = WidgetTHR08 as jest.Mock;
+const MockedApp = App as jest.Mock;
 
 const queryClient = new QueryClient();
 
@@ -25,7 +23,7 @@ describe('App Component', () => {
   });
 
   test('displays loading fallback initially', async () => {
-    MockedWidgetTHR08.mockImplementation(() => {
+    MockedApp.mockImplementation(() => {
       throw new Promise(() => {});
     });
 
@@ -37,14 +35,19 @@ describe('App Component', () => {
     }));
 
     render(
-      <QueryClientProvider client={queryClient}>
-        <MaterialUIThemeProvider theme={materialUiTheme}>
-          <StyledComponentsThemeProvider theme={styledComponentsTheme}>
-            <CssBaseline />
-            <App />
-          </StyledComponentsThemeProvider>
-        </MaterialUIThemeProvider>
-      </QueryClientProvider>,
+      <ThemesProvider>
+        <CssBaseline />
+        <QueryClientProvider client={queryClient}>
+          <AppWrapper>
+            <Suspense fallback={<WidgetLoadingFallback />}>
+              <ErrorBoundary FallbackComponent={WidgetErrorFallback}>
+                <CssBaseline />
+                <App />
+              </ErrorBoundary>
+            </Suspense>
+          </AppWrapper>
+        </QueryClientProvider>
+      </ThemesProvider>,
     );
 
     await waitFor(() =>
@@ -57,18 +60,20 @@ describe('App Component', () => {
   test('displays error fallback on error', async () => {
     jest.spyOn(console, 'error').mockImplementation(() => {});
 
-    MockedWidgetTHR08.mockImplementation(() => {
+    MockedApp.mockImplementation(() => {
       throw new Error('Test error');
     });
 
     render(
       <QueryClientProvider client={queryClient}>
-        <MaterialUIThemeProvider theme={materialUiTheme}>
-          <StyledComponentsThemeProvider theme={styledComponentsTheme}>
-            <CssBaseline />
-            <App />
-          </StyledComponentsThemeProvider>
-        </MaterialUIThemeProvider>
+        <ThemesProvider>
+          <CssBaseline />
+          <Suspense fallback={<WidgetLoadingFallback />}>
+            <ErrorBoundary FallbackComponent={WidgetErrorFallback}>
+              <App />
+            </ErrorBoundary>
+          </Suspense>
+        </ThemesProvider>
       </QueryClientProvider>,
     );
 
@@ -79,16 +84,14 @@ describe('App Component', () => {
   });
 
   test('renders WidgetTHR08 after loading', async () => {
-    MockedWidgetTHR08.mockImplementation(() => <div>Widget THR08 Loaded</div>);
+    MockedApp.mockImplementation(() => <div>Widget THR08 Loaded</div>);
 
     render(
       <QueryClientProvider client={queryClient}>
-        <MaterialUIThemeProvider theme={materialUiTheme}>
-          <StyledComponentsThemeProvider theme={styledComponentsTheme}>
-            <CssBaseline />
-            <App />
-          </StyledComponentsThemeProvider>
-        </MaterialUIThemeProvider>
+        <ThemesProvider>
+          <CssBaseline />
+          <App />
+        </ThemesProvider>
       </QueryClientProvider>,
     );
 

@@ -1,0 +1,45 @@
+name: Test and Deploy to Staging
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - staging
+  pull_request:
+    branches:
+      - staging
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.common.yml
+    with:
+      run_production_tests: false
+
+  get-environment-variables:
+    name: Get environment variables for staging
+    runs-on: ubuntu-latest
+    outputs:
+      staging_destination: ${{ steps.set_destination.outputs.staging_destination }}
+      staging_deployment_url: ${{ steps.set_destination.outputs.staging_deployment_url}}
+    steps:
+      - name: Set STAGING_DESTINATION to environment
+        id: set_destination
+        run: |
+          STAGING_DOMAIN_NAME=${{vars.STAGING_DOMAIN_NAME}}
+          STAGING_DESTINATION="/var/www/${STAGING_DOMAIN_NAME}/"          
+          STAGING_DEPLOYMENT_URL="https://${STAGING_DOMAIN_NAME}/"
+          echo "staging_destination=${STAGING_DESTINATION}" >> $GITHUB_OUTPUT
+          echo "staging_deployment_url=${STAGING_DEPLOYMENT_URL}" >> $GITHUB_OUTPUT
+
+  build-and-deploy:
+    name: Build and Deploy to Staging
+    needs:
+      - test
+      - get-environment-variables
+
+    uses: ./.github/workflows/deploy.common.yml
+    with:
+      ssh_destination_dir: ${{ needs.get-environment-variables.outputs.staging_destination }}
+      ssh_deployment_url: ${{ needs.get-environment-variables.outputs.staging_deployment_url }}
+    secrets: inherit

@@ -1,1 +1,1 @@
-export {ShouldAwaitForControlsToShowTestCase} from './ShouldAwaitForControlsToShowTestCase'
+export { ShouldAwaitForControlsToShowTestCase } from './ShouldAwaitForControlsToShowTestCase';

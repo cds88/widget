@@ -1,8 +1,8 @@
-import { expect, test } from '@playwright/test'; 
+import { expect, test } from '@playwright/test';
 import { styledComponentsTheme } from '../../src/styles/styledComponentsTheme';
 import { THR08Page } from '../utils/THR08Page';
 import { WEBPACK_DEVELOPEMENT_URL } from '../../const';
-import * as e2eFunctionalTestCases from '../../playwrightTestCases/functionalTestCases'
+import * as e2eFunctionalTestCases from '../../playwrightTestCases/functionalTestCases';
 import { SPINNER_DATA_TESTIDS } from '@widget/molecules/WidgetFallbacks/const.test';
 
 const ELEMENTS_COUNT = 5;
@@ -16,25 +16,26 @@ test.describe('THRO8 widget page', () => {
     );
   });
 
-  test(e2eFunctionalTestCases.ShouldAwaitForControlsToShowTestCase.label, async ({
-    page,
-  }) => {
-    const thr08 = new THR08Page(page);
+  test(
+    e2eFunctionalTestCases.ShouldAwaitForControlsToShowTestCase.label,
+    async ({ page }) => {
+      const thr08 = new THR08Page(page);
 
-    expect(thr08.percentageResult).toHaveText('20%');
-    expect(thr08.stripeIndicators).toHaveCount(5);
-    expect(thr08.stripeIndicators.first()).toHaveCSS(
-      'background-color',
-      styledComponentsTheme.styled.colors.indicator.selected,
-    );
-
-    for (let i = 1; i < ELEMENTS_COUNT - 1; i++) {
-      await expect(thr08.stripeIndicators.nth(i)).toHaveCSS(
+      expect(thr08.percentageResult).toHaveText('20%');
+      expect(thr08.stripeIndicators).toHaveCount(5);
+      expect(thr08.stripeIndicators.first()).toHaveCSS(
         'background-color',
-        styledComponentsTheme.styled.colors.indicator.notSelected,
+        styledComponentsTheme.styled.colors.indicator.selected,
       );
-    }
-  });
+
+      for (let i = 1; i < ELEMENTS_COUNT - 1; i++) {
+        await expect(thr08.stripeIndicators.nth(i)).toHaveCSS(
+          'background-color',
+          styledComponentsTheme.styled.colors.indicator.notSelected,
+        );
+      }
+    },
+  );
   test('Should present proper results after 1 click', async ({ page }) => {
     const thr08 = new THR08Page(page);
 

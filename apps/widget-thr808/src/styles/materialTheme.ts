@@ -1,7 +1,6 @@
 import { createTheme } from '@mui/material';
 
 export const materialUiTheme = createTheme({
- 
   typography: {
     htmlFontSize: 16,
     fontSize: 16,
@@ -31,7 +30,7 @@ export const materialUiTheme = createTheme({
       fontSize: '0.875rem',
     },
   },
-  
+
   components: {
     MuiSwitch: {
       styleOverrides: {
@@ -68,8 +67,5 @@ export const materialUiTheme = createTheme({
       default: 'rgba(3,21,45,255)',
       paper: 'rgba(16,41,72,255)',
     },
-
-    
   },
-  
 });
